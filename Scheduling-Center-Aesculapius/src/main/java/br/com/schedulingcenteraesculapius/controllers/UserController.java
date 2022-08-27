@@ -40,7 +40,7 @@ public User user(@PathVariable("id") Long id){
 return null;
 }
 
-@PostMapping("/")  //recebemos atributos dentro do body
+@PostMapping("/")  
 public User user(@RequestBody User user){
     users.add(user);
     return user;
