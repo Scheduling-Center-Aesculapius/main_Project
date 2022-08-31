@@ -1,0 +1,22 @@
+.card-logo{
+    margin-top: 4.2rem;
+    background-color: rgba(184, 222, 242, 49%);
+    padding: 1rem;
+    border-radius: 0;
+    border: none;
+}
+
+.card-team{
+    padding: 5rem 10rem 20rem 10rem;
+    border-radius: 0;
+    border: none;
+}
+
+.container{
+    text-align: left;
+}
+
+.logo{
+    height: 40%;
+}
+

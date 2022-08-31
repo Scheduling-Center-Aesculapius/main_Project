@@ -1,0 +1,29 @@
+a {
+    color: white;
+}
+
+.logo-menu {
+    width: 30%;
+    height: 50%;
+}
+
+li {
+    padding: 3px;
+}
+
+button {
+    background-color: #345B70;
+    color: white;
+}
+
+.navbar {
+    background-color: #4488BB;
+}
+
+.language-flag {
+    height: 40px;
+}
+
+.dropdown-menu {
+    background-color: #4488BB;
+}

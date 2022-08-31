@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginPatientComponent } from './login-patient/login-patient.component';
-import { MainPageComponent } from './main-page/main-page.component';
+import { LoginPatientComponent } from './components/login-patient/login-patient.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 const routes: Routes = [
-  {path: '/login-patient', component:LoginPatientComponent},
-  {path: '/main-page', component:MainPageComponent},
+  {path: 'main-page', component:MainPageComponent},
+  {path: 'login-patient', component: LoginPatientComponent}
 ];
 
 @NgModule({
