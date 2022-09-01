@@ -1,3 +1,6 @@
+*{
+    color: #345b70;
+}
 .card-logo{
     margin-top: 4.2rem;
     background-color: rgba(184, 222, 242, 49%);
@@ -7,16 +10,22 @@
 }
 
 .card-team{
-    padding: 5rem 10rem 20rem 10rem;
     border-radius: 0;
     border: none;
+    
 }
 
 .container{
     text-align: left;
 }
 
-.logo{
-    height: 40%;
+h2{
+    padding: 5rem 0;
+    font-size: 3.5em;
+    color: #345b70;
 }
+/* 
+.social-icon span{
+    background-color: orange;
 
+} */
