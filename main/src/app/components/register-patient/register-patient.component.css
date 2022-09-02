@@ -1,8 +1,10 @@
-#login-doctor{
+
+#register-patient{
     max-height: 100vh;
     min-height: 100vh;
+    min-width: inherit;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: bottom;
     background-position: bottom;
 }
 
@@ -15,7 +17,7 @@
     min-width: 100%;
 }
 
-.login-form{
+.register-form{
     background-image: url(/assets/background/background_7.png);
      max-height: 100vh;
     min-height: 100vh;
@@ -34,8 +36,8 @@
 }
 
 .form_container {
-    margin-top: 5rem;
-    font-size: 2em;
+    /* margin-top: 3rem; */
+    padding: 3rem;
 }
 
 .btn{
