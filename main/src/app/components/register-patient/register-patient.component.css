@@ -1,46 +1,53 @@
-
-#register-patient{
+#login-doctor {
     max-height: 100vh;
     min-height: 100vh;
-    min-width: inherit;
     background-repeat: no-repeat;
-    background-attachment: bottom;
+    background-attachment: fixed;
     background-position: bottom;
 }
 
-.container{
+.row>* {
+    flex-shrink: 0;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: var(--bs-gutter-y);
+}
+
+.container {
     margin: 0 !important;
     padding: 0 !important;
     border: none;
-    max-height: 100vh;
-    min-height: 100vh;
+    max-height: 1.130.340px;
+    min-height: 1.130.340px;
     min-width: 100%;
 }
 
-.register-form{
+.register-form {
     background-image: url(/assets/background/background_7.png);
-     max-height: 100vh;
+    max-height: 100vh;
     min-height: 100vh;
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 .brand_logo_container {
-    height: 20rem;
     text-align: center;
-    margin-top: 5rem;
 }
 
 .brand_logo {
-    margin-top: 3rem;
+    margin-top: 3.2rem;
     height: 25vh;
     border: 2px solid white;
 }
 
 .form_container {
-    /* margin-top: 3rem; */
-    padding: 3rem;
+    font-size: 1.6em;
+    padding: 2rem;
 }
 
-.btn{
+.btn {
+    margin-top: 0 !important;
     width: 100%;
     background: #4488bb !important;
     color: white !important;
@@ -52,26 +59,26 @@
     outline: 0px !important;
 }
 
-.login_container {
-    padding: 0 2rem;
-}
 
-.input-group-text {
-    background: #4488bb !important;
-    color: white !important;
-    border: 0 !important;
-    border-radius: 0.25rem 0 0 0.25rem !important;
-    height: 40px;
-}
-
-.input_user,
-.input_pass {
-    box-shadow: none !important;
-    outline: 0px !important;
-    font-size: 0.6em;
-}
-
-p{
+p {
     margin-top: 1rem;
     font-size: 0.6em;
 }
+
+form > div {
+    /* padding: 10px; */
+    margin: 0.1rem;
+}
+
+#name-father{
+    width: 118%;
+}
+
+.sos{
+    background-image: url(/assets/background/background_6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 100vh;
+    min-height: 100vh;
+}
+
