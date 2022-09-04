@@ -1,72 +1,99 @@
-.container {
-    min-width: 100vw;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    position: absolute;
+* {
+    color: #345b70;
+}
 
+h2 {
+    padding-top: 2.8rem;
+    font-size: 2.5em;
+    color: #345b70;
 }
 
 .title {
-    display: inline-block;
-    position: absolute;
     color: white;
 }
 
-h1 { 
-    position: absolute; 
-    top: 6rem; 
-    left: 5vw; 
+.container {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none;
+    max-height: 1.130.340px;
+    min-height: 1.130.340px;
+    min-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+.main .row>* {
+    background-color: blue;
+    /* flex-shrink: 0; */
+    /* width: 100%; */
+    /* max-width: 100%; */
+    padding-right: 0;
+    padding-left: 0;
+    /* margin-top: var(--bs-gutter-y); */
+    /* padding-right: 0; */
+}
+
+h1 {
+    position: absolute;
+    top: 6rem;
+    left: 5vw;
     font-size: 6rem;
     color: white;
- }
+}
 
- .txt{
-    position: absolute; 
-    top: 20rem; 
-    left: 5vw; 
+.txt {
+    position: absolute;
+    top: 20rem;
+    left: 5vw;
     font-size: 2.4rem;
     color: white;
 
- }
+}
 
-
-.img {
+.container-about {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none;
     max-height: 100vh;
-    min-width: 100vw;
-    background-color: #4488BB;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 100vh;
 }
 
-*{
-    color: #345b70;
+
+.logo {
+    height: 15rem !important;
+    width: 15rem !important;
+    margin-top: 5rem;
+    /* vertical-align: middle !important; */
 }
-.card-logo{
-    margin-top: 4.2rem;
-    background-color: rgba(184, 222, 242, 49%);
-    padding: 1rem;
+
+/*  card team */
+.card-team {
     border-radius: 0;
     border: none;
+    max-height: 50% !important;
+    min-height: 50% !important ;
+    margin: 5rem;
 }
 
-.card-team{
-    border-radius: 0;
-    border: none;
-    
+.card-team img{
+    height: 20rem;
+    width: 20rem;
 }
 
-.container{
-    text-align: left;
-}
-
-h2{
-    padding: 5rem 0;
-    font-size: 3.5em;
-    color: #345b70;
-}
-
-span{
+a {
     font-size: 2.2em;
+    border: none;
 }
+
+a:hover{
+    background-color: #345b70;
+    cursor: pointer;
+}
+
+span:hover{
+    color: white;    
+}
+
+

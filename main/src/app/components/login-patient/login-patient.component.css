@@ -1,4 +1,4 @@
-#login-doctor{
+#login-doctor {
     max-height: 100vh;
     min-height: 100vh;
     background-repeat: no-repeat;
@@ -6,23 +6,33 @@
     background-position: bottom;
 }
 
-.container{
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: var(--bs-gutter-y);
+    padding-right: 0;
+}
+
+.container {
     margin: 0 !important;
     padding: 0 !important;
     border: none;
-    max-height: 100vh;
-    min-height: 100vh;
+    max-height: 1.130.340px;
+    min-height: 1.130.340px;
     min-width: 100%;
 }
 
-.login-form{
+.login-form {
     background-image: url(/assets/background/background_7.png);
-     max-height: 100vh;
+    max-height: 100vh;
     min-height: 100vh;
 }
 
 .brand_logo_container {
-    height: 20rem;
+    /* height: 20rem; */
     text-align: center;
     margin-top: 5rem;
 }
@@ -34,11 +44,11 @@
 }
 
 .form_container {
-    margin-top: 5rem;
-    font-size: 2em;
+    margin-top: 1rem;
+    font-size: 1.6em;
 }
 
-.btn{
+.btn {
     width: 100%;
     background: #4488bb !important;
     color: white !important;
@@ -69,7 +79,7 @@
     font-size: 0.6em;
 }
 
-p{
+p {
     margin-top: 1rem;
     font-size: 0.6em;
 }
