@@ -7,6 +7,7 @@ import { LoginPatientComponent } from './components/login-patient/login-patient.
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterPatientComponent } from './components/register-patient/register-patient.component';
+import { HomepagePatientComponent } from './components/homepage-patient/homepage-patient.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RegisterPatientComponent } from './components/register-patient/register
     MainPageComponent,
     LoginPatientComponent,
     NavbarComponent,
-    RegisterPatientComponent
+    RegisterPatientComponent,
+    HomepagePatientComponent
   ],
   imports: [
     BrowserModule,

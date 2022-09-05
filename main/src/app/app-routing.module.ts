@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomepagePatientComponent } from './components/homepage-patient/homepage-patient.component';
 import { LoginPatientComponent } from './components/login-patient/login-patient.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { RegisterPatientComponent } from './components/register-patient/register-patient.component';
@@ -7,7 +8,8 @@ import { RegisterPatientComponent } from './components/register-patient/register
 const routes: Routes = [
   {path: '', component:MainPageComponent},
   {path: 'login-patient', component: LoginPatientComponent},
-  {path: 'register-patient', component: RegisterPatientComponent}
+  {path: 'register-patient', component: RegisterPatientComponent},
+  {path: 'home-patient', component: HomepagePatientComponent}
 ];
 
 @NgModule({

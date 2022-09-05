@@ -81,4 +81,8 @@ form > div {
     max-height: 100vh;
     min-height: 100vh;
 }
-
+.form-control:focus {
+    outline: 0 !important;
+    border-color: initial;
+    box-shadow: none;
+}
