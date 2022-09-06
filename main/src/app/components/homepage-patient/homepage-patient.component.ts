@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage-patient.component.css']
 })
 export class HomepagePatientComponent implements OnInit {
-
+  professionals!: Array<any>;
   constructor() { }
 
   ngOnInit(): void {
+    this.professionals = new Array();
+    this.professionals.push({
+      name: "Stephen Strange",
+      specialty: "Neurosurgeon"
+    }),
+    this.professionals.push({
+      name: "Gregory House",
+      specialty: "Imunologist"
+    })
   }
 
 }
