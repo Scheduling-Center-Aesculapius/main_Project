@@ -9,6 +9,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterPatientComponent } from './components/register-patient/register-patient.component';
 import { HomepagePatientComponent } from './components/homepage-patient/homepage-patient.component';
 import { RegisterAdmimComponent } from './components/register-admim/register-admim.component';
+import { CarouselModule} from 'primeng/carousel';
+import { PrimeIcons} from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { RegisterAdmimComponent } from './components/register-admim/register-adm
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
