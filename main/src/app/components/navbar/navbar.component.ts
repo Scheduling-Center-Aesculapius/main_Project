@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SecurityService } from 'src/app/security.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +7,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  links:any=new Array();
 
-  constructor() { }
+
+  constructor(
+    public securirity:SecurityService
+  ) { }
 
   ngOnInit(): void {
+
+    if (this.securirity.logged) {
+    this.links.push({title:"Home",route:"home-patient"});
+    this.links.push({title:"About",route:"home-patient"});
+    this.links.push({title:"Professionals",route:"home-patient"});
+    this.links.push({title:"Specialties",route:"home-patient"});
+    this.links.push({title:"Contact us",route:"home-patient"});
+    this.links.push({title:"Olá Admin, Bem vindo!", route:"---"});
+    }else{
+    this.links.push({title:"Home",route:"home-patient"});
+    this.links.push({title:"About",route:"home-patient"});
+    this.links.push({title:"Professionals",route:"home-patient"});
+    this.links.push({title:"Specialties",route:"home-patient"});
+    this.links.push({title:"Contact us",route:"home-patient"});
+    this.links.push({title:"Login",route:"login-patient"});
+    this.links.push({title:"Register",route:"register-patient"});
+
+    }
+
+
   }
 
 }
