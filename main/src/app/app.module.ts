@@ -13,6 +13,7 @@ import { HomepageAdminComponent } from './components/homepage-admin/homepage-adm
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,6 @@ import { HomepageAdminComponent } from './components/homepage-admin/homepage-adm
     BrowserModule,
     AppRoutingModule,
     CarouselModule
-
   ],
   providers: [SecurityService],
   bootstrap: [AppComponent],
