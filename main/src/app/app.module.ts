@@ -10,7 +10,8 @@ import { HomepagePatientComponent } from './components/homepage-patient/homepage
 import { RegisterAdmimComponent } from './components/register-admim/register-admim.component';
 import { SecurityService } from './security.service';
 import { HomepageAdminComponent } from './components/homepage-admin/homepage-admin.component';
-
+import { CarouselModule} from 'primeng/carousel';
+import { PrimeIcons} from 'primeng/api';
 
 
 @NgModule({
