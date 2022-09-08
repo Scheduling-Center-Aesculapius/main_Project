@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { HomepagePatientComponent } from './components/homepage-patient/homepage
 import { RegisterAdmimComponent } from './components/register-admim/register-admim.component';
 import { SecurityService } from './security.service';
 import { HomepageAdminComponent } from './components/homepage-admin/homepage-admin.component';
+
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { HomepageAdminComponent } from './components/homepage-admin/homepage-adm
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule
+
   ],
   providers: [SecurityService],
   bootstrap: [AppComponent],
