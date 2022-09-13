@@ -11,7 +11,7 @@ h2{
 }
 
 /* carousel */
-.professional{
-    height: 200px !important;
+.professional-card{
+border: none !important;
     
 }

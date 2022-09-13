@@ -21,7 +21,7 @@ export class HomepagePatientComponent implements OnInit {
   ngOnInit(): void {
     this.professionals = new Array();
     this.professionals.push({
-      pic: "assets/professional/professional_1.jpg",
+      pic: "assets/professional/professional_2.jpg",
       name: "Stephen Strange",
       specialty: "Neurosurgeon"
     }),
@@ -31,47 +31,47 @@ export class HomepagePatientComponent implements OnInit {
         specialty: "Imunologist"
       }),
       this.professionals.push({
-        pic: "assets/professional/professional_3.jpg",
+        pic: "assets/professional/professional_2.jpg",
         name: "Stephen Strange",
         specialty: "Neurosurgeon"
       }),
       this.professionals.push({
-        pic: "assets/professional/professional_4.jpg",
+        pic: "assets/professional/professional_2.jpg",
         name: "Gregory House",
         specialty: "Imunologist"
       }),
       this.professionals.push({
-        pic: "assets/professional/professional_5.jpg",
+        pic: "assets/professional/professional_2.jpg",
         name: "Stephen Strange",
         specialty: "Neurosurgeon"
       }),
       this.professionals.push({
-        pic: "assets/professional/professional_6.jpg",
+        pic: "assets/professional/professional_2.jpg",
         name: "Gregory House",
         specialty: "Imunologist"
       }),
       this.professionals.push({
-        pic: "assets/professional/professional_7.jpg",
+        pic: "assets/professional/professional_2.jpg",
         name: "Stephen Strange",
         specialty: "Neurosurgeon"
       }),
       this.professionals.push({
-        pic: "assets/professional/professional_8.jpg",
+        pic: "assets/professional/professional_2.jpg",
         name: "Gregory House",
         specialty: "Imunologist"
       }),
       this.professionals.push({
-        pic: "assets/professional/professional_9.jpg",
+        pic: "assets/professional/professional_2.jpg",
         name: "Gregory House",
         specialty: "Imunologist"
       }),
       this.professionals.push({
-        pic: "assets/professional/professional_10.jpg",
+        pic: "assets/professional/professional_2.jpg",
         name: "Gregory House",
         specialty: "Imunologist"
       }),
       this.professionals.push({
-        pic: "assets/professional/professional_11.jpg",
+        pic: "assets/professional/professional_2.jpg",
         name: "Gregory House",
         specialty: "Imunologist"
       })

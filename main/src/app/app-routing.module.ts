@@ -12,7 +12,8 @@ const routes: Routes = [
   {path: '', component:MainPageComponent},
   {path: 'login-patient', component: LoginPatientComponent},
   {path: 'register-patient', component: RegisterPatientComponent},
-  {path: 'home-patient', component: HomepagePatientComponent, canActivate:[SecurityService]},
+  {path: 'home-patient', component: HomepagePatientComponent},
+  // , canActivate:[SecurityService]
   {path: 'login-admin', component: LoginAdmimComponent},
   {path: 'home-admin', component: HomepageAdminComponent},
 ];
