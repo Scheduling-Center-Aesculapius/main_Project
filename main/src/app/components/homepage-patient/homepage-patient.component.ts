@@ -6,8 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage-patient.component.css']
 })
 export class HomepagePatientComponent implements OnInit {
-  professionals!: Array<any>;
-  images!: Array<any>; 
+  // professionals info
+  // professionals!: Array<any>;
+  id!: number;
+  name!: string;
+  favorite:boolean = false;
+  stars: number =0;
+  specialty?:string[];
+  imageUrl!:string;
+
   responsiveOptions;
  
   constructor() {
@@ -19,62 +26,62 @@ export class HomepagePatientComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.professionals = new Array();
-    this.professionals.push({
-      pic: "assets/professional/professional_2.jpg",
-      name: "Stephen Strange",
-      specialty: "Neurosurgeon"
-    }),
-      this.professionals.push({
-        pic: "assets/professional/professional_2.jpg",
-        name: "Gregory House",
-        specialty: "Imunologist"
-      }),
-      this.professionals.push({
-        pic: "assets/professional/professional_2.jpg",
-        name: "Stephen Strange",
-        specialty: "Neurosurgeon"
-      }),
-      this.professionals.push({
-        pic: "assets/professional/professional_2.jpg",
-        name: "Gregory House",
-        specialty: "Imunologist"
-      }),
-      this.professionals.push({
-        pic: "assets/professional/professional_2.jpg",
-        name: "Stephen Strange",
-        specialty: "Neurosurgeon"
-      }),
-      this.professionals.push({
-        pic: "assets/professional/professional_2.jpg",
-        name: "Gregory House",
-        specialty: "Imunologist"
-      }),
-      this.professionals.push({
-        pic: "assets/professional/professional_2.jpg",
-        name: "Stephen Strange",
-        specialty: "Neurosurgeon"
-      }),
-      this.professionals.push({
-        pic: "assets/professional/professional_2.jpg",
-        name: "Gregory House",
-        specialty: "Imunologist"
-      }),
-      this.professionals.push({
-        pic: "assets/professional/professional_2.jpg",
-        name: "Gregory House",
-        specialty: "Imunologist"
-      }),
-      this.professionals.push({
-        pic: "assets/professional/professional_2.jpg",
-        name: "Gregory House",
-        specialty: "Imunologist"
-      }),
-      this.professionals.push({
-        pic: "assets/professional/professional_2.jpg",
-        name: "Gregory House",
-        specialty: "Imunologist"
-      })
+    // this.professionals = new Array();
+    // this.professionals.push({
+    //   imageUrl: "assets/professional/professional_2.jpg",
+    //   name: "Stephen Strange",
+    //   specialty: "Neurosurgeon"
+    // }),
+    //   this.professionals.push({
+    //     imageUrl: "assets/professional/professional_2.jpg",
+    //     name: "Gregory House",
+    //     specialty: "Imunologist"
+    //   }),
+    //   this.professionals.push({
+    //     imageUrl: "assets/professional/professional_2.jpg",
+    //     name: "Stephen Strange",
+    //     specialty: "Neurosurgeon"
+    //   }),
+    //   this.professionals.push({
+    //     imageUrl: "assets/professional/professional_2.jpg",
+    //     name: "Gregory House",
+    //     specialty: "Imunologist"
+    //   }),
+    //   this.professionals.push({
+    //     imageUrl: "assets/professional/professional_2.jpg",
+    //     name: "Stephen Strange",
+    //     specialty: "Neurosurgeon"
+    //   }),
+    //   this.professionals.push({
+    //     imageUrl: "assets/professional/professional_2.jpg",
+    //     name: "Gregory House",
+    //     specialty: "Imunologist"
+    //   }),
+    //   this.professionals.push({
+    //     imageUrl: "assets/professional/professional_2.jpg",
+    //     name: "Stephen Strange",
+    //     specialty: "Neurosurgeon"
+    //   }),
+    //   this.professionals.push({
+    //     imageUrl: "assets/professional/professional_2.jpg",
+    //     name: "Gregory House",
+    //     specialty: "Imunologist"
+    //   }),
+    //   this.professionals.push({
+    //     imageUrl: "assets/professional/professional_2.jpg",
+    //     name: "Gregory House",
+    //     specialty: "Imunologist"
+    //   }),
+    //   this.professionals.push({
+    //     imageUrl: "assets/professional/professional_2.jpg",
+    //     name: "Gregory House",
+    //     specialty: "Imunologist"
+    //   }),
+    //   this.professionals.push({
+    //     imageUrl: "assets/professional/professional_2.jpg",
+    //     name: "Gregory House",
+    //     specialty: "Imunologist"
+    //   })
   }
 
 
