@@ -13,6 +13,7 @@ import { HomepageAdminComponent } from './components/homepage-admin/homepage-adm
 import { CarouselModule } from 'primeng/carousel';
 import { PrimeIcons } from 'primeng/api';
 import { RatingModule } from 'ng-starrating';
+import { RegisterProfessionalComponent } from './components/register-professional/register-professional.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RatingModule } from 'ng-starrating';
     RegisterPatientComponent,
     HomepagePatientComponent,
     RegisterAdmimComponent,
-    HomepageAdminComponent
+    HomepageAdminComponent,
+    RegisterProfessionalComponent
   ],
   imports: [
     BrowserModule,
