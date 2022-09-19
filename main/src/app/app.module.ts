@@ -12,6 +12,8 @@ import { SecurityService } from './security.service';
 import { HomepageAdminComponent } from './components/homepage-admin/homepage-admin.component';
 import { CarouselModule} from 'primeng/carousel';
 import { PrimeIcons} from 'primeng/api';
+import { RatingModule } from 'ng-starrating';
+
 
 
 
@@ -29,7 +31,8 @@ import { PrimeIcons} from 'primeng/api';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule
+    CarouselModule,
+    RatingModule
   ],
   providers: [SecurityService],
   bootstrap: [AppComponent],
