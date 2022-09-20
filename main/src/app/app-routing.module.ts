@@ -5,6 +5,7 @@ import { HomepagePatientComponent } from './components/homepage-patient/homepage
 import { LoginAdmimComponent } from './components/login-admim/login-admim.component';
 import { LoginPatientComponent } from './components/login-patient/login-patient.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import { PatientProfileComponent } from './components/patient-profile/patient-profile.component';
 import { RegisterPatientComponent } from './components/register-patient/register-patient.component';
 import { RegisterProfessionalComponent } from './components/register-professional/register-professional.component';
 import { SecurityService } from './security.service';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'register-patient', component: RegisterPatientComponent},
   {path: 'register-professional', component: RegisterProfessionalComponent},
   {path: 'home-patient', component: HomepagePatientComponent},
+  {path: 'patient-profile', component: PatientProfileComponent},
   // , canActivate:[SecurityService]
   {path: 'login-admin', component: LoginAdmimComponent},
   {path: 'home-admin', component: HomepageAdminComponent},

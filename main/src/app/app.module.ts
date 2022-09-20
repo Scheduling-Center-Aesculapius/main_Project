@@ -18,6 +18,16 @@ import { RegisterProfessionalComponent } from './components/register-professiona
 import { DialogModule } from 'primeng/dialog';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
+import { FooterComponent } from './components/footer/footer.component';
+import { AddAppointmentBtnComponent } from './components/add-appointment-btn/add-appointment-btn.component';
+import { PatientProfileComponent } from './components/patient-profile/patient-profile.component';
+import { AddAppointmentModalComponent } from './components/add-appointment-modal/add-appointment-modal.component';
+import { AppointmentTableComponent } from './components/appointment-table/appointment-table.component';
+import {TableModule} from 'primeng/table';
+import {MultiSelectModule} from 'primeng/multiselect';
+import {DropdownModule} from 'primeng/dropdown';
+
+
 
 
 @NgModule({
@@ -30,7 +40,12 @@ import {ConfirmationService} from 'primeng/api';
     HomepagePatientComponent,
     RegisterAdmimComponent,
     HomepageAdminComponent,
-    RegisterProfessionalComponent
+    RegisterProfessionalComponent,
+    FooterComponent,
+    AddAppointmentBtnComponent,
+    PatientProfileComponent,
+    AddAppointmentModalComponent,
+    AppointmentTableComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +54,10 @@ import {ConfirmationService} from 'primeng/api';
     CarouselModule,
     RatingModule,
     DialogModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    TableModule,
+    MultiSelectModule,
+    DropdownModule
   ],
   providers: [SecurityService],
   bootstrap: [AppComponent],

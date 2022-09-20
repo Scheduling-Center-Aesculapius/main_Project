@@ -4,7 +4,6 @@ import { Professionals } from 'src/app/models/professionals.model';
 import { Specialties } from 'src/app/models/specialties.model';
 import { SpecialtiesService } from 'src/app/services/specialties.service';
 import { StarRatingComponent } from 'ng-starrating';
-import { Modal } from 'src/app/models/modal.model';
 
 
 
@@ -12,14 +11,12 @@ import { Modal } from 'src/app/models/modal.model';
   selector: 'app-homepage-patient',
   templateUrl: './homepage-patient.component.html',
   styleUrls: ['./homepage-patient.component.css'],
-
 })
 
 export class HomepagePatientComponent implements OnInit {
   responsiveOptions;
   professionals: Professionals[] = [];
   specialties: Specialties[] = [];
-  display: boolean = false;
 
 
   constructor(private ps: ProfessionalsService, private ss: SpecialtiesService) {
@@ -34,12 +31,6 @@ export class HomepagePatientComponent implements OnInit {
     this.professionals = this.ps.getAll();
     this.specialties = this.ss.getAllSpecialties();
   }
-
-  showDialog() {
-        this.display = true;
-    }
-
-
 }
 
 
