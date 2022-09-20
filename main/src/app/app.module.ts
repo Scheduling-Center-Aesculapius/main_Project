@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginPatientComponent } from './components/login-patient/login-patient.component';
@@ -14,6 +15,10 @@ import { CarouselModule } from 'primeng/carousel';
 import { PrimeIcons } from 'primeng/api';
 import { RatingModule } from 'ng-starrating';
 import { RegisterProfessionalComponent } from './components/register-professional/register-professional.component';
+import { DialogModule } from 'primeng/dialog';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmationService} from 'primeng/api';
+
 
 @NgModule({
   declarations: [
@@ -29,9 +34,12 @@ import { RegisterProfessionalComponent } from './components/register-professiona
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     CarouselModule,
-    RatingModule
+    RatingModule,
+    DialogModule,
+    ConfirmDialogModule
   ],
   providers: [SecurityService],
   bootstrap: [AppComponent],
