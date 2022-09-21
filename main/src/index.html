@@ -17,10 +17,22 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link href='fullcalendar/main.css' rel='stylesheet' />
+<script src='fullcalendar/main.js'></script>
+<script>
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth'
+    });
+    calendar.render();
+  });
+
+</script>
 </head>
 
-<body>
+<body class="hold-transition sidebar-mini layout-fixed">
   <app-root></app-root>
 </body>
 
