@@ -8,7 +8,6 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { PatientProfileComponent } from './components/patient-profile/patient-profile.component';
 import { RegisterPatientComponent } from './components/register-patient/register-patient.component';
 import { RegisterProfessionalComponent } from './components/register-professional/register-professional.component';
-import { SecurityService } from './security.service';
 
 const routes: Routes = [
   {path: '', component:MainPageComponent},

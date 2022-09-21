@@ -8,14 +8,11 @@ import { AppointmentService } from 'src/app/services/appointment.service';
   styleUrls: ['./appointment-table.component.css']
 })
 export class AppointmentTableComponent implements OnInit {
-  appointments: Appointments[]= [];
- 
+  appointments: Appointments[] = [];
+
   constructor(private appointmentService: AppointmentService) { }
 
   ngOnInit(): void {
     this.appointments = this.appointmentService.getAllAppointments();
-
-   
   }
-
 }

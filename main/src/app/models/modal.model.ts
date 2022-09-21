@@ -1,4 +1,3 @@
-
 export class Modal{
 
     display: boolean = false;

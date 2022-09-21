@@ -26,9 +26,8 @@ import { AppointmentTableComponent } from './components/appointment-table/appoin
 import {TableModule} from 'primeng/table';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {DropdownModule} from 'primeng/dropdown';
-
-
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -57,7 +56,10 @@ import {DropdownModule} from 'primeng/dropdown';
     ConfirmDialogModule,
     TableModule,
     MultiSelectModule,
-    DropdownModule
+    DropdownModule,
+    FormsModule,
+    ReactiveFormsModule
+    
   ],
   providers: [SecurityService],
   bootstrap: [AppComponent],
