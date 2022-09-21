@@ -1,9 +1,14 @@
-#login-doctor {
+.register-container{
+    position: fixed;
+}
+
+#register-patient {
     max-height: 100vh;
     min-height: 100vh;
-    background-repeat: no-repeat;
+    background-repeat: initial;
     background-attachment: fixed;
-    background-position: bottom;
+    background-position: fixed;
+    background-size: cover;
 }
 
 .row>* {
@@ -65,13 +70,15 @@ p {
     font-size: 0.6em;
 }
 
-form > div {
+form>div {
     margin: 0.1rem;
 }
 
-#name-father{
+#name-father {
     width: 118%;
 }
+
+
 
 .sos{
     background-image: url(/assets/background/background_6.jpg);

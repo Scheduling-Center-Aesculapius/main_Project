@@ -19,21 +19,20 @@ export class NavbarComponent implements OnInit {
     if (this.securirity.logged) {
     this.links.push({title:"Home",route:"home-patient"});
     this.links.push({title:"About",route:"home-patient"});
-    this.links.push({title:"Professionals",route:"home-patient"});
+    this.links.push({title:"Professionals",route:"register-professional"});
     this.links.push({title:"Specialties",route:"home-patient"});
     this.links.push({title:"Contact us",route:"home-patient"});
     this.links.push({title:"Olá Admin, Bem vindo!", route:"---"});
     }else{
     this.links.push({title:"Home",route:"home-patient"});
     this.links.push({title:"About",route:"home-patient"});
-    this.links.push({title:"Professionals",route:"home-patient"});
+    this.links.push({title:"Professionals",route:"register-professional"});
     this.links.push({title:"Specialties",route:"home-patient"});
     this.links.push({title:"Contact us",route:"home-patient"});
     this.links.push({title:"Login",route:"login-patient"});
     this.links.push({title:"Register",route:"register-patient"});
 
     }
-
 
   }
 

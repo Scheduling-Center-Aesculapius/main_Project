@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
 })
 export class SecurityService implements CanActivate {
   logged: boolean = false;
+  email!:string
   constructor(
     private router:Router
   ) {}

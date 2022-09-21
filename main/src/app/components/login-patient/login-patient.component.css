@@ -1,9 +1,12 @@
+.sos{
+    position: fixed;
+}
 #login-doctor {
     max-height: 100vh;
     min-height: 100vh;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: bottom;
+    background-attachment: auto;
+    background-position: fixed;
 }
 
 .row>* {
@@ -23,21 +26,25 @@
     max-height: 1.130.340px;
     min-height: 1.130.340px;
     min-width: 100%;
+    margin-bottom: 0!important;
 }
 
 .login-form {
     background-image: url(/assets/background/background_7.png);
     max-height: 100vh;
     min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 .brand_logo_container {
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
+.form-login{
+    margin-top: 0;
+}
 .brand_logo {
     margin-top: 3rem;
     height: 25vh;
@@ -45,15 +52,14 @@
 }
 
 .form_container {
-    margin-top: 5rem;
-    font-size: 1.6em;
+    font-size: .8em;
 }
 
 .btn {
     width: 100%;
     background: #4488bb !important;
     color: white !important;
-    font-size: 0.6em;
+    font-size: 1em;
 }
 
 .btn:hover {
@@ -64,23 +70,15 @@
 .login_container {
     padding: 0 2rem;
 }
-
-.input-group-text {
-    background: #4488bb !important;
-    color: white !important;
-    border: 0 !important;
-    border-radius: 0.25rem 0 0 0.25rem !important;
-    height: 40px;
-}
-
-.input_user,
-.input_pass {
-    box-shadow: none !important;
-    outline: 0px !important;
-    font-size: 0.6em;
-}
-
 p {
     margin-top: 1rem;
     font-size: 0.6em;
+}
+
+.form-control.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+
+.form-control.ng-touched.ng-valid {
+    border: 1px solid green;
 }
