@@ -13,4 +13,12 @@
     box-shadow: 1px 3px 5px #888888;
   }
 
+
+  .form-control.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+
+.form-control.ng-touched.ng-valid {
+    border: 1px solid green;
+}
   

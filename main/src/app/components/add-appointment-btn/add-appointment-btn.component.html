@@ -11,26 +11,43 @@
                     <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
                 </button>
                 <!-- appointment form -->
-                <form class="row g-3">
+                <form [formGroup]="form" class="row g-3" (ngSubmit)="onSubmit()" >
                     <div class="col-md-6">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" formControlName="name" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && formValidation['name'].errors }" />
+                        <div *ngIf="submitted && formValidation['name'].errors" class="invalid-feedback">
+                            <div *ngIf="formValidation['name'].errors['required']">Field is required</div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <label for="last-name" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="last-name">
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{'is-invalid': submitted && formValidation['lastName'].errors}"/>
+                        <div *ngIf="submitted && formValidation['lastName'].errors" class="invalid-feedback">
+                            <div *ngIf="formValidation['lastName'].errors['required']">Field is required</div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <label for="cpf" class="form-label">CPF</label>
-                        <input type="text" class="form-control" id="cpf">
+                        <input type="text" formControlName="cpf" class="form-control" [ngClass]="{'is-invalid': submitted && formValidation['cpf'].errors}"/>
+                        <div *ngIf="submitted && formValidation['cpf'].errors" class="invalid-feedback">
+                            <div *ngIf="formValidation['cpf'].errors['required']">Field is required</div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <label for="phone-number" class="form-label">Phone Number</label>
-                        <input type="text" class="form-control" id="phone-number">
+                        <input type="text" formControlName="phoneNumber" class="form-control" [ngClass]="{'is-invalid': submitted && formValidation['phoneNumber'].errors}"/>
+                        <div *ngIf="submitted && formValidation['phoneNumber'].errors" class="invalid-feedback">
+                            <div *ngIf="formValidation['phoneNumber'].errors['required']">Field is required</div>
+                        </div>
                     </div>
                     <div class="col-12">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="text" formControlName="email" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && formValidation['email'].errors }" />
+                    <div *ngIf="submitted && formValidation['email'].errors" class="invalid-feedback">
+                        <div *ngIf="formValidation['email'].errors['required']">Field is required</div>
+                    </div>
                     </div>
                     <div class="col-12">
                         <label for="professional-select" class="form-label">Choose a professional</label>
@@ -42,15 +59,21 @@
                     </div>
                     <div class="col-md-6">
                         <label for="appointment-date" class="form-label">Date</label>
-                        <input type="date" class="form-control" id="appointment-date">
+                        <input type="date" formControlName="appointmentDate" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && formValidation['appointmentDate'].errors }" />
+                    <div *ngIf="submitted && formValidation['appointmentDate'].errors" class="invalid-feedback">
+                        <div *ngIf="formValidation['appointmentDate'].errors['required']">Field is required</div>
+                    </div>
                     </div>
                     <div class="col-md-6">
                         <label for="appointment-time" class="form-label">Time</label>
                         <input type="time" class="form-control" id="appointment-time">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Save</button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                       
                     </div>
                 </form>
             </div>
