@@ -8,18 +8,20 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { PatientProfileComponent } from './components/patient-profile/patient-profile.component';
 import { RegisterPatientComponent } from './components/register-patient/register-patient.component';
 import { RegisterProfessionalComponent } from './components/register-professional/register-professional.component';
+import { SecurityService } from './security.service';
 
 const routes: Routes = [
-  {path: '', component:MainPageComponent},
+
   {path: 'login-patient', component: LoginPatientComponent},
   {path: 'register-patient', component: RegisterPatientComponent},
   {path: 'register-professional', component: RegisterProfessionalComponent},
-  {path: 'home-patient', component: HomepagePatientComponent},
-  {path: 'patient-profile', component: PatientProfileComponent},
+  {path: 'home-patient', component: HomepagePatientComponent,canActivate:[SecurityService]},
+  {path: 'patient-profile', component: PatientProfileComponent,canActivate:[SecurityService]},
   // , canActivate:[SecurityService]
   {path: 'login-admin', component: LoginAdmimComponent},
-  {path: 'home-admin', component: HomepageAdminComponent},
-  
+  {path: 'home-admin', component: HomepageAdminComponent,canActivate:[SecurityService]},
+  {path: '', component:MainPageComponent},
+
 ];
 
 @NgModule({

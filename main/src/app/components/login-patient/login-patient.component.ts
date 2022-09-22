@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AbstractControl, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import Validation from 'src/app/utils/validation';
+import { SecurityService } from 'src/app/security.service';
 @Component({
   selector: 'app-login-patient',
   templateUrl: './login-patient.component.html',
@@ -14,9 +15,12 @@ export class LoginPatientComponent implements OnInit {
   });
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+    private router: Router,
+    private security: SecurityService) { }
 
   ngOnInit(): void {
+    this.security.logged = false;
     this.form = this.formBuilder.group(
       {
         email: ['', [Validators.required, Validators.email]],
@@ -42,7 +46,7 @@ export class LoginPatientComponent implements OnInit {
 
     if (this.form.invalid) {
       return;
-      
+
     }
 
     console.log(JSON.stringify(this.form.value, null, 2));
@@ -53,5 +57,15 @@ export class LoginPatientComponent implements OnInit {
     this.form.reset();
   }
 
-  
+
+  login(): void {
+    if(!this.form.invalid){
+      this.security.logged = true;
+      this.router.navigateByUrl('home-patient')
+    }
+
+
+
+  }
+
 }
