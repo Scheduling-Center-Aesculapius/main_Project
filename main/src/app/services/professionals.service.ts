@@ -14,7 +14,7 @@ export class ProfessionalsService {
       name: "AAAA",
       favorite: false,
       stars : 4.5,
-      specialty: ['Neurosurgeon'],
+      specialty: "Neurosurgeon",
       imageUrl: "assets/professional/professional_2.jpg"
     },
     {
@@ -22,7 +22,7 @@ export class ProfessionalsService {
       name: "Gregory House",
       favorite: true,
       stars : 5.0,
-      specialty: ['Imunologist'],
+      specialty: "Imunologist",
       imageUrl: "assets/professional/professional_2.jpg"
     },
     {
@@ -30,7 +30,7 @@ export class ProfessionalsService {
       name: "Stephen House",
       favorite: true,
       stars : 4.0,
-      specialty: ['Dermatologist'],
+      specialty: "Dermatologist",
       imageUrl: "assets/professional/professional_2.jpg"
     },
     {
@@ -38,7 +38,7 @@ export class ProfessionalsService {
       name: "Ste House",
       favorite: false,
       stars : 3.0,
-      specialty: ['Dermatologist'],
+      specialty: "Dermatologist",
       imageUrl: "assets/professional/professional_2.jpg"
     },
     {
@@ -46,7 +46,7 @@ export class ProfessionalsService {
       name: "House",
       favorite: true,
       stars : 1.0,
-      specialty: ['Dermatologist'],
+      specialty: "Dermatologist",
       imageUrl: "assets/professional/professional_2.jpg"
     },
     {
@@ -54,7 +54,7 @@ export class ProfessionalsService {
       name: "Stephen",
       favorite: false,
       stars : 2.0,
-      specialty: ['Dermatologist'],
+      specialty: "Dermatologist",
       imageUrl: "assets/professional/professional_2.jpg"
     },
     {
@@ -62,7 +62,7 @@ export class ProfessionalsService {
       name: "n House",
       favorite: true,
       stars : 5.0,
-      specialty: ['Dermatologist'],
+      specialty: "Dermatologist",
       imageUrl: "assets/professional/professional_2.jpg"
     },
     {
@@ -70,7 +70,7 @@ export class ProfessionalsService {
       name: "Stephen House",
       favorite: true,
       stars : 4.0,
-      specialty: ['Dermatologist'],
+      specialty: "Dermatologist",
       imageUrl: "assets/professional/professional_2.jpg"
     }
   ];

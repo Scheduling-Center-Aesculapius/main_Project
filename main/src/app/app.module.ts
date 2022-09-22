@@ -28,6 +28,8 @@ import {MultiSelectModule} from 'primeng/multiselect';
 import {DropdownModule} from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProfessionalSearchComponent } from './components/professional-search/professional-search.component';
+import { SearchProfessionalComponent } from './components/search-professional/search-professional.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AddAppointmentBtnComponent,
     PatientProfileComponent,
     AddAppointmentModalComponent,
-    AppointmentTableComponent
+    AppointmentTableComponent,
+    ProfessionalSearchComponent,
+    SearchProfessionalComponent
   ],
   imports: [
     BrowserModule,

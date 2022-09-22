@@ -3,6 +3,6 @@ export class Professionals {
     name!: string;
     favorite: boolean = false;
     stars: number = 0;
-    specialty?: string[];
+    specialty!: string;
     imageUrl!: string;
 }

@@ -6,6 +6,7 @@ import { LoginAdmimComponent } from './components/login-admim/login-admim.compon
 import { LoginPatientComponent } from './components/login-patient/login-patient.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { PatientProfileComponent } from './components/patient-profile/patient-profile.component';
+import { ProfessionalSearchComponent } from './components/professional-search/professional-search.component';
 import { RegisterPatientComponent } from './components/register-patient/register-patient.component';
 import { RegisterProfessionalComponent } from './components/register-professional/register-professional.component';
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   // , canActivate:[SecurityService]
   {path: 'login-admin', component: LoginAdmimComponent},
   {path: 'home-admin', component: HomepageAdminComponent},
+  {path: 'search/:searchProfessional', component: ProfessionalSearchComponent}
   
 ];
 
