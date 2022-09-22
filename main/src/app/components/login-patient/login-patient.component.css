@@ -9,10 +9,6 @@
     background-position: fixed;
 }
 
-#login-doctor img{
-  background-size: cover;
-}
-
 .row>* {
     flex-shrink: 0;
     width: 100%;

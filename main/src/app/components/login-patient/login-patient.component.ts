@@ -9,6 +9,7 @@ import { SecurityService } from 'src/app/security.service';
   styleUrls: ['./login-patient.component.css']
 })
 export class LoginPatientComponent implements OnInit {
+[x: string]: any;
   form: FormGroup = new FormGroup({
     email: new FormControl(''),
     password: new FormControl('')
@@ -16,11 +17,10 @@ export class LoginPatientComponent implements OnInit {
   submitted = false;
 
   constructor(private formBuilder: FormBuilder,
-    private router: Router,
-    private security: SecurityService) { }
+private security: SecurityService,
+   private  router: Router) { }
 
   ngOnInit(): void {
-    this.security.logged = false;
     this.form = this.formBuilder.group(
       {
         email: ['', [Validators.required, Validators.email]],
@@ -57,15 +57,13 @@ export class LoginPatientComponent implements OnInit {
     this.form.reset();
   }
 
-
-  login(): void {
+  login(): void{
     if(!this.form.invalid){
       this.security.logged = true;
-      this.router.navigateByUrl('home-patient')
+      this.router.navigateByUrl("home-patient");
     }
 
-
-
   }
+
 
 }

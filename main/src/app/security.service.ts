@@ -16,8 +16,7 @@ import { Router } from '@angular/router';
 })
 export class SecurityService implements CanActivate {
   logged: boolean = false;
-  // email!:string
-
+  email!:string
   constructor(
     private router:Router
   ) {}
@@ -30,7 +29,7 @@ export class SecurityService implements CanActivate {
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree> {
       if(!this.logged){
-        this.router.navigateByUrl("login-patient");
+        this.router.navigateByUrl("")
       }
     return this.logged;
   }
