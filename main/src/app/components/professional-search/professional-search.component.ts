@@ -28,6 +28,7 @@ export class ProfessionalSearchComponent implements OnInit {
     this.specialties = this.sps.getAllSpecialties();
 
     this.route.params.subscribe(params => {
+      //  arrumar pra funcionar o filtro por nome e especialidade 
       // if (params['searchProfessional'])
       //   this.professionals = this.ps.getAll().filter(professional =>
       //     professional.name.toLowerCase().includes(params['searchProfessional'].toLowerCase()));

@@ -48,14 +48,22 @@ export class AddAppointmentBtnComponent implements OnInit {
     return this.form.controls;
   }
 
-  onSubmit(): void {
-    this.submitted = true;
+  onSubmit(){
+    // this.submitted = true;
 
-    if (this.form.invalid) {
-      return;
+    // if (this.form.invalid) {
+    //   return;
 
+    // }
+    console.log(this.form.value);
+    if(this.form.valid){
+      console.log('submit')
     }
 
     console.log(JSON.stringify(this.form.value, null, 2));
+  }
+
+  onCancel(){
+    console.log('cancel')
   }
 }

@@ -30,6 +30,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfessionalSearchComponent } from './components/professional-search/professional-search.component';
 import { SearchProfessionalComponent } from './components/search-professional/search-professional.component';
+import { AppointmentFormComponent } from './components/appointment-form/appointment-form.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { SearchProfessionalComponent } from './components/search-professional/se
     AddAppointmentModalComponent,
     AppointmentTableComponent,
     ProfessionalSearchComponent,
-    SearchProfessionalComponent
+    SearchProfessionalComponent,
+    AppointmentFormComponent
   ],
   imports: [
     BrowserModule,
