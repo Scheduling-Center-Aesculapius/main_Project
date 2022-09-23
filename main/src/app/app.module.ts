@@ -32,6 +32,7 @@ import { ProfessionalSearchComponent } from './components/professional-search/pr
 import { SearchProfessionalComponent } from './components/search-professional/search-professional.component';
 import { AppointmentFormComponent } from './components/appointment-form/appointment-form.component';
 import { RouterNotFoundComponent } from './components/router-not-found/router-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { RouterNotFoundComponent } from './components/router-not-found/router-no
     MultiSelectModule,
     DropdownModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
     
   ],
   providers: [SecurityService],

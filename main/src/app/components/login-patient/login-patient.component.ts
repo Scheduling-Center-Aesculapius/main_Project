@@ -3,22 +3,27 @@ import { Router } from '@angular/router';
 import { AbstractControl, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import Validation from 'src/app/utils/validation';
 import { SecurityService } from 'src/app/security.service';
+import { LoginServiceService } from 'src/app/services/login-service.service';
+
 @Component({
   selector: 'app-login-patient',
   templateUrl: './login-patient.component.html',
   styleUrls: ['./login-patient.component.css']
 })
 export class LoginPatientComponent implements OnInit {
-[x: string]: any;
   form: FormGroup = new FormGroup({
     email: new FormControl(''),
     password: new FormControl('')
   });
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder,
-private security: SecurityService,
-   private  router: Router) { }
+
+  user_ = { login: '', password: '' };
+
+  constructor(private loginService : LoginServiceService,
+    private formBuilder: FormBuilder,
+    private security: SecurityService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group(
@@ -33,8 +38,8 @@ private security: SecurityService,
           ]
         ]
       },
-      );
-      console.log(this.form);
+    );
+    // console.log(this.form);
   }
 
   get f(): { [key: string]: AbstractControl } {
@@ -43,12 +48,9 @@ private security: SecurityService,
 
   onSubmit(): void {
     this.submitted = true;
-
     if (this.form.invalid) {
       return;
-
     }
-
     console.log(JSON.stringify(this.form.value, null, 2));
   }
 
@@ -57,13 +59,15 @@ private security: SecurityService,
     this.form.reset();
   }
 
-  login(): void{
-    if(!this.form.invalid){
-      this.security.logged = true;
-      this.router.navigateByUrl("home-patient");
-    }
+  // login(): void{
+  //   if(!this.form.invalid){
+  //     this.security.logged = true;
+  //     this.router.navigateByUrl("home-patient");
+  //   }
 
+  // }
+
+  public login() {
+    this.loginService.login(this.user_);
   }
-
-
 }
