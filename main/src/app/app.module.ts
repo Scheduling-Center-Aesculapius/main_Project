@@ -33,6 +33,8 @@ import { SearchProfessionalComponent } from './components/search-professional/se
 import { AppointmentFormComponent } from './components/appointment-form/appointment-form.component';
 import { RouterNotFoundComponent } from './components/router-not-found/router-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfessionalProfileComponent } from './components/professional-profile/professional-profile.component';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProfessionalSearchComponent,
     SearchProfessionalComponent,
     AppointmentFormComponent,
-    RouterNotFoundComponent
+    RouterNotFoundComponent,
+    ProfessionalProfileComponent
   ],
   imports: [
     BrowserModule,
