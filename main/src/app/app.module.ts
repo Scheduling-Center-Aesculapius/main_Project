@@ -31,6 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProfessionalSearchComponent } from './components/professional-search/professional-search.component';
 import { SearchProfessionalComponent } from './components/search-professional/search-professional.component';
 import { AppointmentFormComponent } from './components/appointment-form/appointment-form.component';
+import { RouterNotFoundComponent } from './components/router-not-found/router-not-found.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { AppointmentFormComponent } from './components/appointment-form/appointm
     AppointmentTableComponent,
     ProfessionalSearchComponent,
     SearchProfessionalComponent,
-    AppointmentFormComponent
+    AppointmentFormComponent,
+    RouterNotFoundComponent
   ],
   imports: [
     BrowserModule,

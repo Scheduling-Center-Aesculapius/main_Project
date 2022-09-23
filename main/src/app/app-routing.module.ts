@@ -9,9 +9,9 @@ import { PatientProfileComponent } from './components/patient-profile/patient-pr
 import { ProfessionalSearchComponent } from './components/professional-search/professional-search.component';
 import { RegisterPatientComponent } from './components/register-patient/register-patient.component';
 import { RegisterProfessionalComponent } from './components/register-professional/register-professional.component';
+import { RouterNotFoundComponent } from './components/router-not-found/router-not-found.component';
 
 const routes: Routes = [
-  {path: '', component:MainPageComponent},
   {path: 'login-patient', component: LoginPatientComponent},
   {path: 'register-patient', component: RegisterPatientComponent},
   {path: 'register-professional', component: RegisterProfessionalComponent},
@@ -20,7 +20,10 @@ const routes: Routes = [
   // , canActivate:[SecurityService]
   {path: 'login-admin', component: LoginAdmimComponent},
   {path: 'home-admin', component: HomepageAdminComponent},
-  {path: 'search/:searchProfessional', component: ProfessionalSearchComponent}
+  {path: 'search/:searchProfessional', component: ProfessionalSearchComponent},
+  {path: '', component:MainPageComponent},
+  // {path: '', redirectTo: '/home, pathMatch:'full'},
+  {path: '**', component:RouterNotFoundComponent},
   
 ];
 
