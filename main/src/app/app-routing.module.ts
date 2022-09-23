@@ -6,6 +6,7 @@ import { LoginAdmimComponent } from './components/login-admim/login-admim.compon
 import { LoginPatientComponent } from './components/login-patient/login-patient.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { PatientProfileComponent } from './components/patient-profile/patient-profile.component';
+import { ProfessionalProfileComponent } from './components/professional-profile/professional-profile.component';
 import { ProfessionalSearchComponent } from './components/professional-search/professional-search.component';
 import { RegisterPatientComponent } from './components/register-patient/register-patient.component';
 import { RegisterProfessionalComponent } from './components/register-professional/register-professional.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'login-patient', component: LoginPatientComponent},
   {path: 'register-patient', component: RegisterPatientComponent},
   {path: 'register-professional', component: RegisterProfessionalComponent},
+  {path: 'professional-profile', component: ProfessionalProfileComponent},
   {path: 'home-patient', component: HomepagePatientComponent},
   {path: 'patient-profile', component: PatientProfileComponent},
   // , canActivate:[SecurityService]

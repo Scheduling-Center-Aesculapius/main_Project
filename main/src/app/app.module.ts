@@ -32,6 +32,7 @@ import { ProfessionalSearchComponent } from './components/professional-search/pr
 import { SearchProfessionalComponent } from './components/search-professional/search-professional.component';
 import { AppointmentFormComponent } from './components/appointment-form/appointment-form.component';
 import { RouterNotFoundComponent } from './components/router-not-found/router-not-found.component';
+import { ProfessionalProfileComponent } from './components/professional-profile/professional-profile.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { RouterNotFoundComponent } from './components/router-not-found/router-no
     ProfessionalSearchComponent,
     SearchProfessionalComponent,
     AppointmentFormComponent,
-    RouterNotFoundComponent
+    RouterNotFoundComponent,
+    ProfessionalProfileComponent
   ],
   imports: [
     BrowserModule,
