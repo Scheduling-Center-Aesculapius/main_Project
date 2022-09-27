@@ -17,10 +17,10 @@ import { RouterNotFoundComponent } from './components/Shared/router-not-found/ro
 const routes: Routes = [
   {path: 'login-patient', component: LoginPatientComponent},
   {path: 'register-patient', component: RegisterPatientComponent},
-  {path: 'register-professional', component: RegisterProfessionalComponent},
-  {path: 'professional-profile', component: ProfessionalProfileComponent},
   {path: 'home-patient', component: HomepagePatientComponent},
   {path: 'patient-profile', component: PatientProfileComponent},
+  {path: 'register-professional', component: RegisterProfessionalComponent},
+  {path: 'professional-profile', component: ProfessionalProfileComponent},
   // , canActivate:[SecurityService]
   {path: 'login-admin', component: LoginAdmimComponent},
   {path: 'home-admin', component: HomepageAdminComponent},
