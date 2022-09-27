@@ -59,15 +59,15 @@ export class LoginPatientComponent implements OnInit {
     this.form.reset();
   }
 
-  // login(): void{
-  //   if(!this.form.invalid){
-  //     this.security.logged = true;
-  //     this.router.navigateByUrl("home-patient");
-  //   }
+  login(): void{
+    if(!this.form.invalid){
+      this.security.logged = true;
+      this.router.navigateByUrl("home-patient");
+    }
 
-  // }
-
-  public login() {
-    this.loginService.login(this.user_);
   }
+
+  // public login() {
+  //   this.loginService.login(this.user_);
+  // }
 }

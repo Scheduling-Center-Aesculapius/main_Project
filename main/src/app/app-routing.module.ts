@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageAdminComponent } from './components/homepage-admin/homepage-admin.component';
-import { HomepagePatientComponent } from './components/homepage-patient/homepage-patient.component';
-import { LoginAdmimComponent } from './components/login-admim/login-admim.component';
-import { LoginPatientComponent } from './components/login-patient/login-patient.component';
-import { MainPageComponent } from './components/main-page/main-page.component';
-import { PatientProfileComponent } from './components/patient-profile/patient-profile.component';
-import { ProfessionalProfileComponent } from './components/professional-profile/professional-profile.component';
-import { ProfessionalSearchComponent } from './components/professional-search/professional-search.component';
-import { RegisterPatientComponent } from './components/register-patient/register-patient.component';
-import { RegisterProfessionalComponent } from './components/register-professional/register-professional.component';
-import { RouterNotFoundComponent } from './components/router-not-found/router-not-found.component';
+import { HomepageAdminComponent } from './components/Admin/homepage-admin/homepage-admin.component';
+import { LoginAdmimComponent } from './components/Admin/login-admim/login-admim.component';
+
+
+import { MainPageComponent } from './components/Shared/main-page/main-page.component';
+import { HomepagePatientComponent } from './components/Patient/homepage-patient/homepage-patient.component';
+import { LoginPatientComponent } from './components/Patient/login-patient/login-patient.component';
+import { PatientProfileComponent } from './components/Patient/patient-profile/patient-profile.component';
+import { RegisterPatientComponent } from './components/Patient/register-patient/register-patient.component';
+import { ProfessionalProfileComponent } from './components/Professional/professional-profile/professional-profile.component';
+import { ProfessionalSearchComponent } from './components/Professional/professional-search/professional-search.component';
+import { RegisterProfessionalComponent } from './components/Professional/register-professional/register-professional.component';
+import { RouterNotFoundComponent } from './components/Shared/router-not-found/router-not-found.component';
 
 const routes: Routes = [
   {path: 'login-patient', component: LoginPatientComponent},

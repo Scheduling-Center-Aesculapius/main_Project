@@ -3,37 +3,39 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginPatientComponent } from './components/login-patient/login-patient.component';
-import { MainPageComponent } from './components/main-page/main-page.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { RegisterPatientComponent } from './components/register-patient/register-patient.component';
-import { HomepagePatientComponent } from './components/homepage-patient/homepage-patient.component';
-import { RegisterAdmimComponent } from './components/register-admim/register-admim.component';
+
+import { MainPageComponent } from './components/Shared/main-page/main-page.component';
+import { NavbarComponent } from './components/Shared/navbar/navbar.component';
 import { SecurityService } from './security.service';
-import { HomepageAdminComponent } from './components/homepage-admin/homepage-admin.component';
+import { HomepageAdminComponent } from './components/Admin/homepage-admin/homepage-admin.component';
 import { CarouselModule } from 'primeng/carousel';
 import { PrimeIcons } from 'primeng/api';
 import { RatingModule } from 'ng-starrating';
-import { RegisterProfessionalComponent } from './components/register-professional/register-professional.component';
 import { DialogModule } from 'primeng/dialog';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
-import { FooterComponent } from './components/footer/footer.component';
-import { AddAppointmentBtnComponent } from './components/add-appointment-btn/add-appointment-btn.component';
-import { PatientProfileComponent } from './components/patient-profile/patient-profile.component';
-import { AddAppointmentModalComponent } from './components/add-appointment-modal/add-appointment-modal.component';
-import { AppointmentTableComponent } from './components/appointment-table/appointment-table.component';
+
 import {TableModule} from 'primeng/table';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {DropdownModule} from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProfessionalSearchComponent } from './components/professional-search/professional-search.component';
-import { SearchProfessionalComponent } from './components/search-professional/search-professional.component';
-import { AppointmentFormComponent } from './components/appointment-form/appointment-form.component';
-import { RouterNotFoundComponent } from './components/router-not-found/router-not-found.component';
+import { RouterNotFoundComponent } from './components/Shared/router-not-found/router-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProfessionalProfileComponent } from './components/professional-profile/professional-profile.component';
+import { ProfessionalProfileComponent } from './components/Professional/professional-profile/professional-profile.component';
+import { LoginPatientComponent } from './components/Patient/login-patient/login-patient.component';
+import { HomepagePatientComponent } from './components/Patient/homepage-patient/homepage-patient.component';
+import { RegisterPatientComponent } from './components/Patient/register-patient/register-patient.component';
+import { AppointmentFormComponent } from './components/Patient/appointment-form/appointment-form.component';
+import { SearchProfessionalComponent } from './components/Professional/search-professional/search-professional.component';
+import { ProfessionalSearchComponent } from './components/Professional/professional-search/professional-search.component';
+import { AppointmentTableComponent } from './components/Patient/appointment-table/appointment-table.component';
+import { AddAppointmentModalComponent } from './components/Patient/add-appointment-modal/add-appointment-modal.component';
+import { PatientProfileComponent } from './components/Patient/patient-profile/patient-profile.component';
+import { AddAppointmentBtnComponent } from './components/Patient/add-appointment-btn/add-appointment-btn.component';
+import { RegisterProfessionalComponent } from './components/Professional/register-professional/register-professional.component';
+import { RegisterAdmimComponent } from './components/Admin/register-admim/register-admim.component';
+import { FooterComponent } from './components/Shared/footer/footer.component';
 
 
 @NgModule({
