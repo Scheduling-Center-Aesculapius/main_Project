@@ -13,6 +13,7 @@ import { ProfessionalProfileComponent } from './components/Professional/professi
 import { ProfessionalSearchComponent } from './components/Professional/professional-search/professional-search.component';
 import { RegisterProfessionalComponent } from './components/Professional/register-professional/register-professional.component';
 import { RouterNotFoundComponent } from './components/Shared/router-not-found/router-not-found.component';
+import { HomepageProfessionalComponent } from './components/Professional/homepage-professional/homepage-professional.component';
 
 const routes: Routes = [
   {path: 'login-patient', component: LoginPatientComponent},
@@ -21,6 +22,8 @@ const routes: Routes = [
   {path: 'patient-profile', component: PatientProfileComponent},
   {path: 'register-professional', component: RegisterProfessionalComponent},
   {path: 'professional-profile', component: ProfessionalProfileComponent},
+  {path: 'home-professional', component: HomepageProfessionalComponent},
+
   // , canActivate:[SecurityService]
   {path: 'login-admin', component: LoginAdmimComponent},
   {path: 'home-admin', component: HomepageAdminComponent},

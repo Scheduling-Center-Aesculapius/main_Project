@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -36,6 +36,8 @@ import { AddAppointmentBtnComponent } from './components/Patient/add-appointment
 import { RegisterProfessionalComponent } from './components/Professional/register-professional/register-professional.component';
 import { RegisterAdmimComponent } from './components/Admin/register-admim/register-admim.component';
 import { FooterComponent } from './components/Shared/footer/footer.component';
+import { HomepageProfessionalComponent } from './components/Professional/homepage-professional/homepage-professional.component';
+import { ProfessionalCalendarComponent } from './components/Professional/professional-calendar/professional-calendar.component';
 
 
 @NgModule({
@@ -58,7 +60,9 @@ import { FooterComponent } from './components/Shared/footer/footer.component';
     SearchProfessionalComponent,
     AppointmentFormComponent,
     RouterNotFoundComponent,
-    ProfessionalProfileComponent
+    ProfessionalProfileComponent,
+    HomepageProfessionalComponent,
+    ProfessionalCalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +78,6 @@ import { FooterComponent } from './components/Shared/footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
-    
   ],
   providers: [SecurityService],
   bootstrap: [AppComponent],

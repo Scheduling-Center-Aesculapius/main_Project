@@ -20,6 +20,7 @@ export class NavbarComponent implements OnInit {
       this.links.push({ title: 'Contact us', route: 'home-patient' });
       this.links.push({ title: 'Login', route: 'login-patient' });
       this.links.push({ title: 'Register', route: 'register-patient' });
+      this.links.push({ title: 'Logout', route: '' });
     } else {
       this.links.push({ title: 'Home', route: 'home-patient' });
       this.links.push({ title: 'About', route: 'home-patient' });
@@ -27,6 +28,7 @@ export class NavbarComponent implements OnInit {
       this.links.push({ title: 'Specialties', route: 'home-patient' });
       this.links.push({ title: 'Contact us', route: 'home-patient' });
       this.links.push({ title: 'Olá, Bem vindo!', route: '---' });
+      this.links.push({ title: 'Logout', route: '' });
     }
   }
 }
