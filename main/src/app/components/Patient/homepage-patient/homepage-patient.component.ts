@@ -4,6 +4,7 @@ import { Professionals } from 'src/app/models/professionals.model';
 import { Specialties } from 'src/app/models/specialties.model';
 import { SpecialtiesService } from 'src/app/services/specialties.service';
 import { StarRatingComponent } from 'ng-starrating';
+import { Observable } from 'rxjs';
 
 
 
@@ -15,8 +16,8 @@ import { StarRatingComponent } from 'ng-starrating';
 
 export class HomepagePatientComponent implements OnInit {
   responsiveOptions;
-  professionals: Professionals[] = [];
-  specialties: Specialties[] = [];
+  professionals: Observable<Professionals[]>;
+  // specialties: Specialties[] = [];
 
 
   constructor(private ps: ProfessionalsService, private ss: SpecialtiesService) {
@@ -25,11 +26,12 @@ export class HomepagePatientComponent implements OnInit {
       numVisible: 1,
       numScroll: 3
     }];
+    this.professionals = this.ps.getAll();
   }
 
   ngOnInit(): void {
-    this.professionals = this.ps.getAll();
-    this.specialties = this.ss.getAllSpecialties();
+    
+    // this.specialties = this.ss.getAllSpecialties();
   }
 }
 

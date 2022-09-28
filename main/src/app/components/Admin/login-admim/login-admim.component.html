@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<!-- <div class="container mt-5">
   <div class="row g-0">
       <div class="col" id="left">
       </div>
@@ -11,7 +11,7 @@
           </div>
           <div class="d-flex justify-content-center form_container">
               <form id="form_validation" action="post" method="post">
-                <h3>LOGIM AS ADMIN</h3>
+                <h3>LOGIN AS ADMIN</h3>
                   <div class="form-group mb-3">
                       <input class="form-control input_user" type="text" id="name" name="name" placeholder="Username">
                   </div>
@@ -20,7 +20,6 @@
                           placeholder="Password">
                   </div>
                   <div class="d-flex justify-content-center mt-3 login_container">
-                      <!-- <button type="button" name="button" class="btn login_btn">Login</button> -->
                       <a routerLink="register-patient" class="nav-link text-black">
                           <button type="button" class="btn">Login</button>
                       </a>
@@ -36,4 +35,61 @@
       </div>
 
   </div>
-</div>
+</div> -->
+
+<div class="row mt-5">
+    <div class="col"></div>
+    <div class="col-2 mt-5">
+      <div class="card">
+        <div class="card-body login-card-body">
+          <p class="login-box-msg">Login to start your session</p>
+   
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                (ngModel)="email"
+                placeholder="Username"
+              />
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-user"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input
+                type="password"
+                (ngModel)="password"
+                class="form-control"
+                placeholder="Password"
+              />
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div> 
+  
+          <div class="social-auth-links text-center mb-3">
+            <button (click)="login()" class="btn btn-primary"> Login </button>
+          </div>
+          <!-- /.social-auth-links -->
+  
+          <div class="text-center">
+  
+            <p class="mb-1">
+              <a href="#" (click)="forgotPassword()">I forgot my password</a>
+            </p>
+            <p class="mb-0">
+              <a href="#" (click)="register()" class="text-center"
+              >Register a new membership</a
+              >
+            </p>
+          </div>
+        </div>
+        <!-- /.login-card-body -->
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>

@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserLoggedService {
-  apiUrl: string = 'http://localhost:8080';
+  apiUrl: string = 'https://aesculapius-scheduling-center.herokuapp.com/login';
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string) {

@@ -24,20 +24,20 @@ export class ProfessionalSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.professionals = this.ps.getAll();
-    this.specialties = this.sps.getAllSpecialties();
+    // this.professionals = this.ps.getAll();
+    // this.specialties = this.sps.getAllSpecialties();
 
-    this.route.params.subscribe(params => {
+    // this.route.params.subscribe(params => {
       //  arrumar pra funcionar o filtro por nome e especialidade 
       // if (params['searchProfessional'])
       //   this.professionals = this.ps.getAll().filter(professional =>
       //     professional.name.toLowerCase().includes(params['searchProfessional'].toLowerCase()));
       // else 
-      if (params['searchProfessional'])
-        this.professionals = this.ps.getAll().filter(professional =>
-          professional.specialty.toLowerCase().includes(params['searchProfessional'].toLowerCase()));
-      else
-        this.professionals = this.ps.getAll();
-    })
+      // if (params['searchProfessional'])
+      //   this.professionals = this.ps.getAll().filter(professional =>
+      //     professional.specialty.toLowerCase().includes(params['searchProfessional'].toLowerCase()));
+      // else
+      //   this.professionals = this.ps.getAll();
+    }
+    
   }
-}

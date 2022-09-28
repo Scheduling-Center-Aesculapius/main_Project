@@ -4,9 +4,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 import { MainPageComponent } from './components/Shared/main-page/main-page.component';
 import { NavbarComponent } from './components/Shared/navbar/navbar.component';
-import { SecurityService } from './security.service';
+import { SecurityService } from './services/security.service';
 import { HomepageAdminComponent } from './components/Admin/homepage-admin/homepage-admin.component';
 import { CarouselModule } from 'primeng/carousel';
 import { PrimeIcons } from 'primeng/api';
@@ -38,6 +39,9 @@ import { RegisterAdmimComponent } from './components/Admin/register-admim/regist
 import { FooterComponent } from './components/Shared/footer/footer.component';
 import { HomepageProfessionalComponent } from './components/Professional/homepage-professional/homepage-professional.component';
 import { ProfessionalCalendarComponent } from './components/Professional/professional-calendar/professional-calendar.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { TestComponent } from './components/Professional/test/test.component';
 
 
 @NgModule({
@@ -62,7 +66,8 @@ import { ProfessionalCalendarComponent } from './components/Professional/profess
     RouterNotFoundComponent,
     ProfessionalProfileComponent,
     HomepageProfessionalComponent,
-    ProfessionalCalendarComponent
+    ProfessionalCalendarComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +82,8 @@ import { ProfessionalCalendarComponent } from './components/Professional/profess
     DropdownModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
   ],
   providers: [SecurityService],
   bootstrap: [AppComponent],
