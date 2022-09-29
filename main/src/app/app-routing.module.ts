@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageAdminComponent } from './components/Admin/homepage-admin/homepage-admin.component';
 import { LoginAdmimComponent } from './components/Admin/login-admim/login-admim.component';
-
-
 import { MainPageComponent } from './components/Shared/main-page/main-page.component';
 import { HomepagePatientComponent } from './components/Patient/homepage-patient/homepage-patient.component';
 import { LoginPatientComponent } from './components/Patient/login-patient/login-patient.component';
@@ -16,6 +14,7 @@ import { RouterNotFoundComponent } from './components/Shared/router-not-found/ro
 import { HomepageProfessionalComponent } from './components/Professional/homepage-professional/homepage-professional.component';
 
 const routes: Routes = [
+  {path: '', component:MainPageComponent},
   {path: 'login-patient', component: LoginPatientComponent},
   {path: 'register-patient', component: RegisterPatientComponent},
   {path: 'home-patient', component: HomepagePatientComponent},
@@ -28,9 +27,8 @@ const routes: Routes = [
   {path: 'login-admin', component: LoginAdmimComponent},
   {path: 'home-admin', component: HomepageAdminComponent},
   {path: 'search/:searchProfessional', component: ProfessionalSearchComponent},
-  {path: '', component:MainPageComponent},
   // {path: '', redirectTo: '/home, pathMatch:'full'},
-  {path: '**', component:RouterNotFoundComponent},
+  // {path: '**', component:RouterNotFoundComponent},
   
 ];
 

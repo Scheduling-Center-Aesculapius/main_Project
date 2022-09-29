@@ -1,15 +1,15 @@
-<!-- <div class="container-fluid">
+<div class="container-fluid">
     <div class="row">
         <h3>Find a professional </h3>
         <div class="input-group">
             <app-search-professional></app-search-professional>
         </div>
     </div>
-</div> -->
+</div>
 <!-- carousel primeng -->
-<!-- <div class="container-fluid mt-5">
+<div class="container-fluid mt-5">
         <div class="card professional-card">
-            <p-carousel [value]="professionals" styleClass="custom-carousel" [numVisible]="5" [numScroll]="1"
+            <p-carousel [value]="professionals" styleClass="custom-carousel" [numVisible]="1" [numScroll]="1"
                 [circular]="true" [responsiveOptions]="responsiveOptions" [style]={}>
                 <ng-template let-professionals pTemplate="item">
                     <div class="item card">
@@ -20,11 +20,11 @@
 
                             <div class="details">
                                 <div class="row">
-                                    <div class="col text">
+                                    <!-- <div class="col text">
                                         <star-rating [value]="professionals.stars" [totalstars]="5"
                                             checkedcolor="#345B70" uncheckedcolor="gray" size="18px" [readonly]="true">
                                         </star-rating>
-                                    </div>
+                                    </div> -->
                                     <div class="col text-end">
                                         <span class=" btn favorite{{professionals.favorite?'':'not'}}"> <i
                                                 class="fa fa-heart"></i></span>
@@ -36,10 +36,10 @@
                 </ng-template>
             </p-carousel>
         </div>
-</div> -->
+</div>
 
 <!-- specialties cards -->
-<!-- <div class="container-fluid">
+<div class="container-fluid">
     <div class="row">
         <h2>Specialties</h2>
         <div class="col-lg-3" *ngFor="let specialty of specialties">
@@ -69,14 +69,9 @@
             </div>
         </div>
     </div>
-</div> -->
+</div> 
 
 
-<ul>
-    <li *ngFor="let professional of (professionals | async)">
-      {{ professionals }}
-    </li>
-  </ul>
 
-<!-- <app-add-appointment-btn></app-add-appointment-btn>
-<app-add-appointment-modal></app-add-appointment-modal> -->
+<app-add-appointment-btn></app-add-appointment-btn>
+<app-add-appointment-modal></app-add-appointment-modal>

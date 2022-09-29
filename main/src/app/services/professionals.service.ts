@@ -1,17 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Professionals } from '../models/professionals.model';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfessionalsService {
-  private readonly Professional_API = "https://aesculapius-scheduling-center.herokuapp.com/medicals"
+  baseUrl: String = environment.baseUrl;
 
   constructor(private httpClient: HttpClient) { }
 
-  getAll(){
-    return this.httpClient.get<Professionals[]>(this.Professional_API);
-  }
+  getAll(): Observable<Professionals[]>{
+    const url = this.baseUrl + '/patients';
+    return this.httpClient.get<Professionals[]>(url);
+    }
 }
