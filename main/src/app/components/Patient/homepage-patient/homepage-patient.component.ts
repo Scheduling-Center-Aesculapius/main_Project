@@ -16,15 +16,13 @@ export class HomepagePatientComponent implements OnInit {
   responsiveOptions;
   professionals: Professionals[] = [];
   specialties: Specialties[] = [];
-
-
+  
   constructor(private ps: ProfessionalsService, private ss: SpecialtiesService) {
     this.responsiveOptions = [{
       breakpoint: '1024px',
       numVisible: 8,
       numScroll: 3
     }];
-
   }
 
   ngOnInit(): void {

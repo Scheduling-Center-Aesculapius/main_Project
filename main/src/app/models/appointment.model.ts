@@ -1,8 +1,10 @@
 export class Appointments {
     id!: number;
-    patientName!: string;
-    doctorName!:string;
-    appointmentDate!:string;
-    appointmentTime!:string;
-    patology?: string[];
+    patient!: string;
+    medical!:string;
+    dateOpen!:string;
+    dateClosed!:string;
+    description!: string;
+    priority!: string;
+    status!: string;
 }

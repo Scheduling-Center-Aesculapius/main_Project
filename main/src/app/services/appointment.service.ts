@@ -1,46 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
+import { environment } from 'src/environments/environment';
 import { Appointments } from '../models/appointment.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppointmentService {
+  baseUrl: String = environment.baseUrl;
+  
+  constructor(private httpClient: HttpClient) { }
 
-  constructor() { }
-
-  getAllAppointments(): Appointments[] {
-    return [{
-      id: 1,
-      patientName: "Steve Rogers",
-      doctorName: "Gregory House",
-      appointmentDate: "12/05/2022",
-      appointmentTime: "15h00",
-      patology: ["Headache", " Stomachache"]
-    },
-    {
-      id: 2,
-      patientName: "Steve Rogers",
-      doctorName: "Gregory Stark",
-      appointmentDate: "12/09/2022",
-      appointmentTime: "17h00",
-      patology: ["Headache"]
-    },
-    {
-      id: 3,
-      patientName: "Steve Rogers",
-      doctorName: "Stephen House",
-      appointmentDate: "13/05/2022",
-      appointmentTime: "19h00",
-      patology: ["Headache", " Stomachache"]
-    },
-    {
-      id: 4,
-      patientName: "Steve Rogers",
-      doctorName: "Gregory House",
-      appointmentDate: "12/09/2022",
-      appointmentTime: "15h00",
-      patology: ["Headache", " Stomachache"]
-    }
-    ]
+  getAllAppointments(): Observable<Appointments[]> {
+    const url = this.baseUrl + '/scheduling';
+    return this.httpClient.get<Appointments[]>(url);
   }
 }

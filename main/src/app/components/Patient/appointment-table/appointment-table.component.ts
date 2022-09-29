@@ -13,6 +13,14 @@ export class AppointmentTableComponent implements OnInit {
   constructor(private appointmentService: AppointmentService) { }
 
   ngOnInit(): void {
-    this.appointments = this.appointmentService.getAllAppointments();
+    this.findAll();
+    console.log(this.appointments);
+  }
+
+  findAll(): void {
+    this.appointmentService.getAllAppointments().subscribe((resposta) => {
+      this.appointments = resposta;
+      console.log(this.appointments)
+    })
   }
 }

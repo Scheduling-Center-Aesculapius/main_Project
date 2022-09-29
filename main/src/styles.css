@@ -9,3 +9,7 @@
     border-color: initial;
     box-shadow: none;
 }
+
+.breadcrumb{
+    background-color:transparent !important;
+}

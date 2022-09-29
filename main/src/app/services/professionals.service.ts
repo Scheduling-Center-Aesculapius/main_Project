@@ -14,7 +14,7 @@ export class ProfessionalsService {
   constructor(private httpClient: HttpClient) { }
 
   getAll(): Observable<Professionals[]>{
-    const url = this.baseUrl + '/patients';
+    const url = this.baseUrl + '/medicals';
     return this.httpClient.get<Professionals[]>(url);
     }
 }

@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StepsModule } from 'primeng/steps';
+import { ToastModule } from 'primeng/toast';
 
 
 import { MainPageComponent } from './components/Shared/main-page/main-page.component';
@@ -42,6 +44,7 @@ import { ProfessionalCalendarComponent } from './components/Professional/profess
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { TestComponent } from './components/Professional/test/test.component';
+import { RegisterPatientFormComponent } from './components/Patient/register-patient-form/register-patient-form.component';
 
 
 @NgModule({
@@ -67,7 +70,8 @@ import { TestComponent } from './components/Professional/test/test.component';
     ProfessionalProfileComponent,
     HomepageProfessionalComponent,
     ProfessionalCalendarComponent,
-    TestComponent
+    TestComponent,
+    RegisterPatientFormComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +87,9 @@ import { TestComponent } from './components/Professional/test/test.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
+    StepsModule,
+    ToastModule,
   ],
   providers: [SecurityService],
   bootstrap: [AppComponent],
