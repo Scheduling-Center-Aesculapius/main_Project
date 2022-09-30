@@ -17,6 +17,7 @@ import { RatingModule } from 'ng-starrating';
 import { DialogModule } from 'primeng/dialog';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
+import { FormGroup,Validators,FormBuilder } from '@angular/forms';
 
 import {TableModule} from 'primeng/table';
 import {MultiSelectModule} from 'primeng/multiselect';
@@ -71,7 +72,8 @@ import { RegisterPatientFormComponent } from './components/Patient/register-pati
     HomepageProfessionalComponent,
     ProfessionalCalendarComponent,
     TestComponent,
-    RegisterPatientFormComponent
+    RegisterPatientFormComponent,
+ 
   ],
   imports: [
     BrowserModule,
@@ -90,6 +92,7 @@ import { RegisterPatientFormComponent } from './components/Patient/register-pati
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     StepsModule,
     ToastModule,
+
   ],
   providers: [SecurityService],
   bootstrap: [AppComponent],
