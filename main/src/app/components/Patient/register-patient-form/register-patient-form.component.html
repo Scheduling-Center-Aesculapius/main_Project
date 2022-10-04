@@ -56,9 +56,9 @@
                         <div class="col">
                             <select class="form-select" aria-label="Sex">
                                 <option selected>Sex</option>
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
-                                <option value="3">Other</option>
+                                <option value="0">Male</option>
+                                <option value="1">Female</option>
+                                <option value="2">Other</option>
                             </select>
                         </div>
                         <div class="col-6">
@@ -91,10 +91,27 @@
                     <div *ngIf="address_step && addressInformation.controls['city'].errors">
                         <div *ngIf="address['city'].errors?.['required']">City is required</div>
                     </div>
-                    <textarea rows="5" cols="5" formControlName="address" placeholder="address"></textarea>
+
+                    <input type="text" formControlName="state" placeholder="State" />
+                    <div *ngIf="address_step && addressInformation.controls['state'].errors">
+                        <div *ngIf="address['state'].errors?.['required']">State is required</div>
+                    </div>
+
+                    <input type="text" formControlName="street" placeholder="Street" />
+                    <div *ngIf="address_step && addressInformation.controls['street'].errors">
+                        <div *ngIf="address['street'].errors?.['required']">Street is required</div>
+                    </div>
+
+                    <input type="text" formControlName="numberAddress" placeholder="Number Address" />
+                    <div *ngIf="address_step && addressInformation.controls['numberAddress'].errors">
+                        <div *ngIf="address['numberAddress'].errors?.['required']">Number Address is required</div>
+                    </div>
+
+
+                    <!-- <textarea rows="5" cols="5" formControlName="address" placeholder="address"></textarea>
                     <div *ngIf="address_step && addressInformation.controls['address'].errors">
                         <div *ngIf="address['address'].errors?.['required']">Address is required</div>
-                    </div>
+                    </div> -->
                     <input type="text" formControlName="pincode" placeholder="Pincode" />
                     <div *ngIf="address_step && addressInformation.controls['pincode'].errors">
                         <div *ngIf="address['pincode'].errors?.['required']">Pincode is required</div>
