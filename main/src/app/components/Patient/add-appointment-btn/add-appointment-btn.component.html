@@ -34,39 +34,39 @@
             <label for="last-name" class="form-label">Name</label>
             <input type="text" formControlName="lastName" class="form-control"
               [ngClass]="{ 'is-invalid': submitted && hasError('lastName') }" />
-              <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['required']">
-                Field is required
-              </div>
-              <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['minlength']">
-                Field must be at least 3 characters long.
-              </div>
-              <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['maxlength']">
-                Field must have a maximum of 20 characters.
-              </div>
+            <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['required']">
+              Field is required
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['minlength']">
+              Field must be at least 3 characters long.
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('lastName') && hasError('lastName')?.['maxlength']">
+              Field must have a maximum of 20 characters.
+            </div>
           </div>
 
           <div class="col-md-6">
             <label for="cpf" class="form-label">CPF</label>
             <input type="text" formControlName="cpf" class="form-control"
-              [ngClass]="{ 'is-invalid': submitted && hasError('cpf') }"/>
-              <div class="invalid-feedback" *ngIf="hasError('cpf') && hasError('cpf')?.['required']">
-                Field is required
-              </div>
-              <div class="invalid-feedback" *ngIf="hasError('cpf') && hasError('cpf')?.['pattern']">
-                Invalid CPF.
-              </div>
+              [ngClass]="{ 'is-invalid': submitted && hasError('cpf') }" />
+            <div class="invalid-feedback" *ngIf="hasError('cpf') && hasError('cpf')?.['required']">
+              Field is required
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('cpf') && hasError('cpf')?.['pattern']">
+              Invalid CPF.
+            </div>
           </div>
 
           <div class="col-md-6">
             <label for="phone-number" class="form-label">Phone Number</label>
             <input type="text" formControlName="phoneNumber" class="form-control"
               [ngClass]="{'is-invalid': submitted && hasError('phoneNumber')}" />
-              <div class="invalid-feedback" *ngIf="hasError('phoneNumber') && hasError('phoneNumber')?.['required']">
-                Field is required
-              </div>
-              <div class="invalid-feedback" *ngIf="hasError('phoneNumber') && hasError('phoneNumber')?.['pattern']">
-               Invalid phone number!
-              </div>
+            <div class="invalid-feedback" *ngIf="hasError('phoneNumber') && hasError('phoneNumber')?.['required']">
+              Field is required
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('phoneNumber') && hasError('phoneNumber')?.['pattern']">
+              Invalid phone number!
+            </div>
           </div>
 
           <div class="col-md-12">
@@ -86,18 +86,20 @@
             </select>
           </div>
 
-          
+
 
           <div class="col-md-6">
             <label for="appointment-date" class="form-label">Appointment date</label>
             <input type="date" formControlName="appointmentDate" class="form-control"
               [ngClass]="{'is-invalid': submitted && hasError('appointmentDate')}" />
-              <div class="invalid-feedback" *ngIf="hasError('appointmentDate') && hasError('appointmentDate')?.['required']">
-                Field is required
-              </div>
-              <div class="invalid-feedback" *ngIf="hasError('appointmentDate') && hasError('appointmentDate')?.['pattern']">
-               Invalid date!
-              </div>
+            <div class="invalid-feedback"
+              *ngIf="hasError('appointmentDate') && hasError('appointmentDate')?.['required']">
+              Field is required
+            </div>
+            <div class="invalid-feedback"
+              *ngIf="hasError('appointmentDate') && hasError('appointmentDate')?.['pattern']">
+              Invalid date!
+            </div>
           </div>
 
           <div class="col-md-6">

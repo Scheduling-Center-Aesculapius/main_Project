@@ -37,15 +37,15 @@
                         </div>
                         <div class="col-3">
                             <input type="text" formControlName="email" name="email" placeholder="Email" />
-                        <div *ngIf="personal_step && personalInformation.controls['email'].errors">
-                            <div *ngIf="personal['email'].errors?.['required']">Email is required</div>
-                        </div>
+                            <div *ngIf="personal_step && personalInformation.controls['email'].errors">
+                                <div *ngIf="personal['email'].errors?.['required']">Email is required</div>
+                            </div>
                         </div>
                         <div class="col-3">
                             <input type="text" formControlName="phone" name="phone" placeholder="Phone" />
-                        <div *ngIf="personal_step && personalInformation.controls['phone'].errors">
-                            <div *ngIf="personal['phone'].errors?.['required']">Phone is required</div>
-                        </div>
+                            <div *ngIf="personal_step && personalInformation.controls['phone'].errors">
+                                <div *ngIf="personal['phone'].errors?.['required']">Phone is required</div>
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <input type="date" formControlName="birthdate" name="birthdate" placeholder="Birthdate" />
@@ -77,9 +77,9 @@
                                 <div *ngIf="personal['fatherName'].errors?.['required']">Field is required</div>
                             </div>
                         </div>
-                       <div class="row">
-                        <input (click)="next()" type="button" name="next" class="next action-button" value="Next" />
-                       </div>
+                        <div class="row">
+                            <input (click)="next()" type="button" name="next" class="next action-button" value="Next" />
+                        </div>
                     </div>
                 </fieldset>
 

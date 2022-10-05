@@ -16,7 +16,7 @@
 <!-- carousel primeng -->
 <div class="container-fluid mt-5">
     <div class="card professional-card">
-        <p-carousel [value]="professionals" styleClass="custom-carousel" [numVisible]="5" [numScroll]="1"
+        <p-carousel [value]="professionals" styleClass="custom-carousel" [numVisible]="8" [numScroll]="1"
             [circular]="true" [responsiveOptions]="responsiveOptions" [style]={}>
             <ng-template let-professionals pTemplate="item">
                 <div class="item card">
@@ -61,15 +61,12 @@
                                 </span>
                             </div>
                             <div class="specialty-title">
-                                <span class="card-title">{{specialty.title}}</span>
+                                <span class="card-title" style="color: red">{{specialty.title}}</span>
                             </div>
                         </div>
                         <ol class="specialty-description">
-                            <p>{{specialty.description}}</p>
+                            <p style="color: red">{{specialty.description}}</p>
                         </ol>
-                        <div class="specialty-more-info">
-                            <a href="#" class="btn btn-sm btn-flash-border-success">More info</a>
-                        </div>
                     </div>
                 </div>
             </div>
