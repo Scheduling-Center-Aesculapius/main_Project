@@ -47,6 +47,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { TestComponent } from './components/Professional/test/test.component';
 import { RegisterPatientFormComponent } from './components/Patient/register-patient-form/register-patient-form.component';
 import { LoginAdminComponent } from './components/Admin/login-admin/login-admin.component';
+import { TeamComponent } from './components/Team/team/team.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { LoginAdminComponent } from './components/Admin/login-admin/login-admin.
     ProfessionalCalendarComponent,
     TestComponent,
     RegisterPatientFormComponent,
-    LoginAdminComponent, 
+    LoginAdminComponent,
+    TeamComponent, 
   ],
   imports: [
     BrowserModule,
