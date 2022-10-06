@@ -46,6 +46,7 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { TestComponent } from './components/Professional/test/test.component';
 import { RegisterPatientFormComponent } from './components/Patient/register-patient-form/register-patient-form.component';
+import { LoginAdminComponent } from './components/Admin/login-admin/login-admin.component';
 
 
 @NgModule({
@@ -73,7 +74,7 @@ import { RegisterPatientFormComponent } from './components/Patient/register-pati
     ProfessionalCalendarComponent,
     TestComponent,
     RegisterPatientFormComponent,
- 
+    LoginAdminComponent, 
   ],
   imports: [
     BrowserModule,

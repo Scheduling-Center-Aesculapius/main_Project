@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageAdminComponent } from './components/Admin/homepage-admin/homepage-admin.component';
-import { LoginAdmimComponent } from './components/Admin/login-admim/login-admim.component';
+
 import { MainPageComponent } from './components/Shared/main-page/main-page.component';
 import { HomepagePatientComponent } from './components/Patient/homepage-patient/homepage-patient.component';
 import { LoginPatientComponent } from './components/Patient/login-patient/login-patient.component';
@@ -12,6 +12,7 @@ import { ProfessionalSearchComponent } from './components/Professional/professio
 import { RegisterProfessionalComponent } from './components/Professional/register-professional/register-professional.component';
 import { RouterNotFoundComponent } from './components/Shared/router-not-found/router-not-found.component';
 import { HomepageProfessionalComponent } from './components/Professional/homepage-professional/homepage-professional.component';
+import { LoginAdminComponent } from './components/Admin/login-admin/login-admin.component';
 
 const routes: Routes = [
   {path: '', component:MainPageComponent},
@@ -24,7 +25,7 @@ const routes: Routes = [
   {path: 'home-professional', component: HomepageProfessionalComponent},
 
   // , canActivate:[SecurityService]
-  {path: 'login-admin', component: LoginAdmimComponent},
+  {path: 'login-admin', component: LoginAdminComponent},
   {path: 'home-admin', component: HomepageAdminComponent},
   {path: 'search/:searchProfessional', component: ProfessionalSearchComponent},
   // {path: '', redirectTo: '/home, pathMatch:'full'},
