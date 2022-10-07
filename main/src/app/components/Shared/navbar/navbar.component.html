@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand fixed-top">
-  <div class="container-fluid justify-content-center">
+  <div class="container-fluid">
     <a href="#" class="navbar-brand"><img src="../assets/logos/logo_2.1.png"
         class="d-inline-block align-text-top logo-menu"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -12,59 +12,7 @@
           <a *ngIf="link.route" [routerLink]="link.route" class="nav-link">
             {{link.title}}
           </a>
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Language
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#"><img src="/assets/brazil_flag.png" class="language-flag" alt="">
-                Portuguese</a></li>
-            <li><a class="dropdown-item" href="#"><img src="/assets/eua_flag.png" class="language-flag" alt="">
-                English</a></li>
-          </ul>
-        </li> -->
       </ul>
     </div>
   </div>
 </nav>
-
-
-
-<!-- <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
-  <div class="container">
-    <a href="../../index3.html" class="navbar-brand">
-      <img src="../assets/logos/logo_2.1.png" alt="AdminLTE Logo" 
-        style="opacity: .8">
-    
-    </a>
-    <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse order-3" id="navbarCollapse">
-
-      <ul class="navbar-nav">
-        <li class="nav-item" *ngFor="let link of links">
-          <a *ngIf="link.route" [routerLink]="link.route" class="nav-link">
-            {{link.title}}
-          </a>
-        </li>
-       
-        
-      </ul>
-
-      
-    </div>
-
-    <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-
-     
-
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav> -->

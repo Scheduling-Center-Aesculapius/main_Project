@@ -13,6 +13,7 @@ import { RegisterProfessionalComponent } from './components/Professional/registe
 import { RouterNotFoundComponent } from './components/Shared/router-not-found/router-not-found.component';
 import { HomepageProfessionalComponent } from './components/Professional/homepage-professional/homepage-professional.component';
 import { LoginAdminComponent } from './components/Admin/login-admin/login-admin.component';
+import { TeamComponent } from './components/Team/team/team.component';
 
 const routes: Routes = [
   {path: '', component:MainPageComponent},
