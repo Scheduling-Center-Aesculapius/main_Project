@@ -42,30 +42,30 @@ export class LoginAdminComponent implements OnInit {
     return this.formLoginAdmin.controls;
   }
 
-  // onSubmit(): void {
-  //   this.submittedForm = true;
-  //   if (this.formLoginAdmin.invalid) {
-  //     return;
-  //   }
-  //   console.log(JSON.stringify(this.formLoginAdmin, null, 2));
-  // }
-
-  // login(): void {
-  //   if (!this.formLoginAdmin.invalid) {
-  //     this.securityService.logged = true;
-  //     this.router.navigateByUrl("home-admin");
-  //   }
-  // }
-
-  handleLogin() {
-    this.authenticationService.authenticationService(this.username, this.password).subscribe((result) => {
-      this.invalidLogin = false;
-      this.loginSuccess = true;
-      this.successMessage = 'Login Successful.';
-      this.router.navigate(['/hello-world']);
-    }, () => {
-      this.invalidLogin = true;
-      this.loginSuccess = false;
-    });
+  onSubmit(): void {
+    this.submittedForm = true;
+    if (this.formLoginAdmin.invalid) {
+      return;
+    }
+    console.log(JSON.stringify(this.formLoginAdmin, null, 2));
   }
+
+  login(): void {
+    if (!this.formLoginAdmin.invalid) {
+      this.securityService.logged = true;
+      this.router.navigateByUrl("home-admin");
+    }
+  }
+
+  // handleLogin() {
+  //   this.authenticationService.authenticationService(this.username, this.password).subscribe((result) => {
+  //     this.invalidLogin = false;
+  //     this.loginSuccess = true;
+  //     this.successMessage = 'Login Successful.';
+  //     this.router.navigate(['/hello-world']);
+  //   }, () => {
+  //     this.invalidLogin = true;
+  //     this.loginSuccess = false;
+  //   });
+  // }
 }
