@@ -11,7 +11,7 @@ import { LoginServiceService } from 'src/app/services/login-service.service';
   styleUrls: ['./login-patient.component.css']
 })
 export class LoginPatientComponent implements OnInit {
-  form: FormGroup = new FormGroup({
+    form: FormGroup = new FormGroup({
     email: new FormControl(''),
     password: new FormControl('')
   });
@@ -63,6 +63,8 @@ export class LoginPatientComponent implements OnInit {
     if(!this.form.invalid){
       this.security.logged = true;
       this.router.navigateByUrl("home-patient");
+      console.log("Logou...");
+      
     }
 
   }

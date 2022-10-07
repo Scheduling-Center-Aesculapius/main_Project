@@ -14,21 +14,22 @@ import { RouterNotFoundComponent } from './components/Shared/router-not-found/ro
 import { HomepageProfessionalComponent } from './components/Professional/homepage-professional/homepage-professional.component';
 import { LoginAdminComponent } from './components/Admin/login-admin/login-admin.component';
 import { TeamComponent } from './components/Team/team/team.component';
+import { SecurityService } from './services/security.service';
 
 const routes: Routes = [
   {path: '', component:MainPageComponent},
   {path: 'login-patient', component: LoginPatientComponent},
   {path: 'register-patient', component: RegisterPatientComponent},
-  {path: 'home-patient', component: HomepagePatientComponent},
-  {path: 'patient-profile', component: PatientProfileComponent},
+  {path: 'home-patient', component: HomepagePatientComponent, canActivate:[SecurityService]},
+  {path: 'patient-profile', component: PatientProfileComponent, canActivate:[SecurityService]},
   {path: 'register-professional', component: RegisterProfessionalComponent},
-  {path: 'professional-profile', component: ProfessionalProfileComponent},
-  {path: 'home-professional', component: HomepageProfessionalComponent},
+  {path: 'professional-profile', component: ProfessionalProfileComponent, canActivate:[SecurityService]},
+  {path: 'home-professional', component: HomepageProfessionalComponent, canActivate:[SecurityService]},
 
   // , canActivate:[SecurityService]
   {path: 'login-admin', component: LoginAdminComponent},
-  {path: 'home-admin', component: HomepageAdminComponent},
-  {path: 'search/:searchProfessional', component: ProfessionalSearchComponent},
+  {path: 'home-admin', component: HomepageAdminComponent, canActivate:[SecurityService]},
+  {path: 'search/:searchProfessional', component: ProfessionalSearchComponent, canActivate:[SecurityService]},
   // {path: '', redirectTo: '/home, pathMatch:'full'},
   // {path: '**', component:RouterNotFoundComponent},
   
