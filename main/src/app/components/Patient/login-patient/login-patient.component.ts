@@ -4,6 +4,7 @@ import { AbstractControl, FormGroup, FormControl, FormBuilder, Validators } from
 import Validation from 'src/app/utils/validation';
 import { SecurityService } from 'src/app/services/security.service';
 import { LoginServiceService } from 'src/app/services/login-service.service';
+import { LoginPatient } from 'src/app/models/loginPatient';
 
 @Component({
   selector: 'app-login-patient',
@@ -16,7 +17,7 @@ export class LoginPatientComponent implements OnInit {
     password: new FormControl('')
   });
   submitted = false;
-
+  public LoginPatient!: LoginPatient;
 
   user_ = { login: '', password: '' };
 
@@ -26,6 +27,7 @@ export class LoginPatientComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
+    this.LoginPatient = new LoginPatient();
     this.form = this.formBuilder.group(
       {
         email: ['', [Validators.required, Validators.email]],
@@ -60,11 +62,18 @@ export class LoginPatientComponent implements OnInit {
   }
 
   login(): void{
-    if(!this.form.invalid){
-      this.security.logged = true;
-      this.router.navigateByUrl("home-patient");
-      console.log("Logou...");
-      
+    if(!this.form.invalid ){
+      this.loginService.loginPatient(this.LoginPatient).subscribe(
+        (date) => {
+          this.security.logged = true;
+          this.router.navigateByUrl("home-patient");
+
+        },
+        (error) => {console.log(error)}
+      )
+      // this.router.navigateByUrl("home-patient");
+      // console.log("Logou...");
+
     }
 
   }
