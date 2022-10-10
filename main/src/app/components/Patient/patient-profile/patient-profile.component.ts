@@ -33,10 +33,10 @@ export class PatientProfileComponent implements OnInit {
   });
   submitted = false;
 
-  constructor(private patientService: PatientsService, private formBuilder: FormBuilder) { }
+  constructor(private ps: PatientsService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.patients = this.patientService.getAllPatients();
+    this.findAll();
     this.formSettings = this.formBuilder.group(
       {
         name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
@@ -64,13 +64,17 @@ export class PatientProfileComponent implements OnInit {
 
   onSubmit(): void {
     this.submitted = true;
-
     if (this.formSettings.invalid) {
       return;
-
     }
-
     console.log(JSON.stringify(this.formSettings.value, null, 2));
+  }
+
+  findAll(): void{
+    this.ps.getAllPatients().subscribe((resposta) =>{
+      this.patients = resposta;
+      console.log(this.patients)
+    })
   }
 
 }

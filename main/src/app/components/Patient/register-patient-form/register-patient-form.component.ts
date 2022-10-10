@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder, FormControl, AbstractControl } from '@angular/forms';
+import { PatientsService } from 'src/app/services/patients.service';
 
 @Component({
   selector: 'app-register-patient-form',
@@ -13,7 +14,7 @@ export class RegisterPatientFormComponent implements OnInit {
 
 
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private ps: PatientsService) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group(
@@ -44,12 +45,13 @@ export class RegisterPatientFormComponent implements OnInit {
     return this.form.get(field)?.errors;
   }
 
-  onSubmit() {
+  register() {
     this.submitted = true;
-    console.log(this.form.value);
-    if (this.form.valid) {
-      console.log('submit')
-    }
+    // console.log(this.form.value);
+    // if (this.form.valid) {
+    //   console.log(this.form)
+    // }
+    this.ps.save(this.form.value).subscribe(result => console.warn(result));
   }
 
   onCancel() {
