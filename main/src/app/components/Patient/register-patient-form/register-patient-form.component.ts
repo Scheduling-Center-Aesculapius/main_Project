@@ -26,9 +26,9 @@ export class RegisterPatientFormComponent implements OnInit {
         phoneNumber: ['', [Validators.required, Validators.pattern("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$")]],
         sex: ['', Validators.required],
         email: ['', [Validators.required, Validators.email]],
-        password: ['', Validators.required, Validators.minLength(8), Validators.maxLength(20)],
-        confirmPassword: ['', Validators.required, Validators.minLength(8), Validators.maxLength(20)],
-        professional: ['', [Validators.requiredTrue]],
+        // password: ['', Validators.required, Validators.minLength(8), Validators.maxLength(20)],
+        // confirmPassword: ['', Validators.required, Validators.minLength(8), Validators.maxLength(20)],
+        // professional: ['', [Validators.requiredTrue]],
         birthdate: ['', [Validators.pattern("(0?[1-9]|[12]\d|30|31)[^\w\d\r\n:](0?[1-9]|1[0-2])[^\w\d\r\n:](\d{4}|\d{2})")]],
         motherName: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
         fatherName: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
@@ -41,9 +41,6 @@ export class RegisterPatientFormComponent implements OnInit {
 
 
       },
-      {
-        validator: ConfirmedValidator('password', 'confirmPassword')
-      }
     );
     console.log(this.form);
   }
@@ -58,7 +55,8 @@ export class RegisterPatientFormComponent implements OnInit {
 
   register() {
     this.submitted = true;
-    this.ps.save(this.form.value).subscribe(result => console.warn(result));
+    console.log(this.form.value);
+    this.ps.save(this.form.value).subscribe(result => console.log(result));
   }
 
   onCancel() {

@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginAdmin } from 'src/app/models/loginAdmin';
+
+
 import { AuthService } from 'src/app/services/auth.service';
+import { LoginAdminService } from 'src/app/services/login-admin.service';
+import { LoginServiceService } from 'src/app/services/login-service.service';
+
 import { SecurityService } from 'src/app/services/security.service';
 
 @Component({
@@ -22,13 +28,15 @@ export class LoginAdminComponent implements OnInit {
   loginSuccess = false;
 
   submittedForm = false;
+  public LoginAdmin!: LoginAdmin;
 
   admin_ = { username: '', password: '' };
 
   constructor(private formBuilder: FormBuilder, private router: Router, private securityService: SecurityService,
-    private authenticationService: AuthService) { }
+    private authenticationService: AuthService, private loginService : LoginAdminService) { }
 
   ngOnInit(): void {
+    this.LoginAdmin = new LoginAdmin();
     this.formLoginAdmin = this.formBuilder.group(
       {
         username: ['', [Validators.required]],
@@ -50,22 +58,16 @@ export class LoginAdminComponent implements OnInit {
     console.log(JSON.stringify(this.formLoginAdmin, null, 2));
   }
 
-  login(): void {
-    if (!this.formLoginAdmin.invalid) {
-      this.securityService.logged = true;
-      this.router.navigateByUrl("home-admin");
+  login(): void{
+    if(!this.formLoginAdmin.invalid ){
+      this.loginService.loginAdmin(this.LoginAdmin).subscribe(
+        (date) => {
+          this.securityService.logged = true;
+          this.router.navigateByUrl("home-admin");
+
+        },
+        (error) => {console.log(error)}
+      )
     }
   }
-
-  // handleLogin() {
-  //   this.authenticationService.authenticationService(this.username, this.password).subscribe((result) => {
-  //     this.invalidLogin = false;
-  //     this.loginSuccess = true;
-  //     this.successMessage = 'Login Successful.';
-  //     this.router.navigate(['/hello-world']);
-  //   }, () => {
-  //     this.invalidLogin = true;
-  //     this.loginSuccess = false;
-  //   });
-  // }
 }

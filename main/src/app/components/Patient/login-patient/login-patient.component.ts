@@ -12,7 +12,7 @@ import { LoginPatient } from 'src/app/models/loginPatient';
   styleUrls: ['./login-patient.component.css']
 })
 export class LoginPatientComponent implements OnInit {
-    form: FormGroup = new FormGroup({
+  form: FormGroup = new FormGroup({
     email: new FormControl(''),
     password: new FormControl('')
   });
@@ -21,7 +21,7 @@ export class LoginPatientComponent implements OnInit {
 
   user_ = { login: '', password: '' };
 
-  constructor(private loginService : LoginServiceService,
+  constructor(private loginService: LoginServiceService,
     private formBuilder: FormBuilder,
     private security: SecurityService,
     private router: Router) { }
@@ -61,24 +61,16 @@ export class LoginPatientComponent implements OnInit {
     this.form.reset();
   }
 
-  login(): void{
-    if(!this.form.invalid ){
+  login(): void {
+    if (!this.form.invalid) {
       this.loginService.loginPatient(this.LoginPatient).subscribe(
         (date) => {
           this.security.logged = true;
           this.router.navigateByUrl("home-patient");
 
         },
-        (error) => {console.log(error)}
+        (error) => { console.log(error) }
       )
-      // this.router.navigateByUrl("home-patient");
-      // console.log("Logou...");
-
     }
-
   }
-
-  // public login() {
-  //   this.loginService.login(this.user_);
-  // }
 }
