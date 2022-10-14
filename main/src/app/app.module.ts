@@ -57,6 +57,7 @@ import { TechnologiesDocumentationComponent } from './components/Technologies/te
 import { TechnologiesVersioningComponent } from './components/Technologies/technologies-versioning/technologies-versioning.component';
 import { TechnologiesManagementComponent } from './components/Technologies/technologies-management/technologies-management.component';
 import { TechnologiesSectionComponent } from './components/Shared/technologies-section/technologies-section.component';
+import { VideoComponent } from './components/Shared/video/video.component';
 
 
 @NgModule({
@@ -94,7 +95,8 @@ import { TechnologiesSectionComponent } from './components/Shared/technologies-s
     TechnologiesDocumentationComponent,
     TechnologiesVersioningComponent,
     TechnologiesManagementComponent,
-    TechnologiesSectionComponent, 
+    TechnologiesSectionComponent,
+    VideoComponent, 
   ],
   imports: [
     BrowserModule,
