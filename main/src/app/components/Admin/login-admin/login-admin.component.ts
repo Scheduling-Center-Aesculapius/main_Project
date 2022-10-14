@@ -30,7 +30,7 @@ export class LoginAdminComponent implements OnInit {
   submittedForm = false;
   public LoginAdmin!: LoginAdmin;
 
-  admin_ = { username: '', password: '' };
+  admin = { username: '', password: '' };
 
   constructor(private formBuilder: FormBuilder, private router: Router, private securityService: SecurityService,
     private authenticationService: AuthService, private loginService : LoginAdminService) { }

@@ -9,7 +9,7 @@ export class AuthEmailService {
   constructor() { }
 
   public clear():void{
-    this.loginResponse = undefined;
+    // this.loginResponse = undefined;
   }
 
   public isAuth():boolean{
