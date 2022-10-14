@@ -48,6 +48,15 @@ import { TestComponent } from './components/Professional/test/test.component';
 import { RegisterPatientFormComponent } from './components/Patient/register-patient-form/register-patient-form.component';
 import { LoginAdminComponent } from './components/Admin/login-admin/login-admin.component';
 import { TeamComponent } from './components/Team/team/team.component';
+import { TechnologiesPrototypingComponent } from './components/Technologies/technologies-prototyping/technologies-prototyping.component';
+import { TechnologiesFrontEndComponent } from './components/Technologies/technologies-front-end/technologies-front-end.component';
+import { TechnologiesBackEndComponent } from './components/Technologies/technologies-back-end/technologies-back-end.component';
+import { TechnologiesIdeComponent } from './components/Technologies/technologies-ide/technologies-ide.component';
+import { TechnologiesDatabaseComponent } from './components/Technologies/technologies-database/technologies-database.component';
+import { TechnologiesDocumentationComponent } from './components/Technologies/technologies-documentation/technologies-documentation.component';
+import { TechnologiesVersioningComponent } from './components/Technologies/technologies-versioning/technologies-versioning.component';
+import { TechnologiesManagementComponent } from './components/Technologies/technologies-management/technologies-management.component';
+import { TechnologiesSectionComponent } from './components/Shared/technologies-section/technologies-section.component';
 
 
 @NgModule({
@@ -76,7 +85,16 @@ import { TeamComponent } from './components/Team/team/team.component';
     TestComponent,
     RegisterPatientFormComponent,
     LoginAdminComponent,
-    TeamComponent, 
+    TeamComponent,
+    TechnologiesPrototypingComponent,
+    TechnologiesFrontEndComponent,
+    TechnologiesBackEndComponent,
+    TechnologiesIdeComponent,
+    TechnologiesDatabaseComponent,
+    TechnologiesDocumentationComponent,
+    TechnologiesVersioningComponent,
+    TechnologiesManagementComponent,
+    TechnologiesSectionComponent, 
   ],
   imports: [
     BrowserModule,
