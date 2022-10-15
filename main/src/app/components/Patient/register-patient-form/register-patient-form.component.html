@@ -109,7 +109,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <label for="inputState" class="form-label">Sex</label>
                     <select id="inputState" class="form-select">
                         <option selected>Choose...</option>
@@ -117,7 +117,7 @@
                         <option>Female</option>
                         <option>Other</option>
                     </select>
-                </div>
+                </div> -->
 
                 <div class="col-md-6">
                     <label for="email" class="form-label">Email</label>
@@ -126,7 +126,7 @@
                     <div class="invalid-feedback" *ngIf="hasError('email')">Field is required</div>
                 </div>
 
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <label for="password" class="form-label">Password</label>
                     <input type="password" formControlName="password" class="form-control"
                         [ngClass]="{ 'is-invalid': submitted && hasError('password') }" />
@@ -139,9 +139,9 @@
                     <div class="invalid-feedback" *ngIf="hasError('password') && hasError('password')?.['maxlength']">
                         Password must have a maximum of 20 characters.
                     </div>
-                </div>
+                </div> -->
 
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <label for="confirmPassword" class="form-label">Confirm Password</label>
                     <input type="password" formControlName="confirmPassword" class="form-control"
                         [ngClass]="{ 'is-invalid': submitted && hasError('confirmPassword') }" />
@@ -149,7 +149,7 @@
                         Field is required
                     </div>
                     <div *ngIf="f['confirm_password'].hasError('confirmedValidator')">Password and Confirm Password must be match.</div>
-                </div>
+                </div> -->
 
                 
 

@@ -1,3 +1,7 @@
-.card-header{
+.card-header {
     background-color: #4488BB !important;
+}
+
+img {
+    height: 3rem;
 }
