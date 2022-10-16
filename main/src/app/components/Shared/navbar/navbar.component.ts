@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
     this.links = []
     if (!this.security.logged) {
       this.links.push({ title: 'Home', route: 'home-patient' });
-      this.links.push({ title: 'Professionals', route: 'register-professional' });
+      this.links.push({ title: 'Professionals', route: 'login-professional' });
       this.links.push({ title: 'Login', route: 'login-patient' });
       this.links.push({ title: 'Register', route: 'register-patient' });
     } else {
