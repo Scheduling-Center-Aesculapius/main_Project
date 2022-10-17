@@ -19,6 +19,8 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
 import { FormGroup,Validators,FormBuilder } from '@angular/forms';
 
+
+
 import {TableModule} from 'primeng/table';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {DropdownModule} from 'primeng/dropdown';
@@ -114,9 +116,15 @@ import { LoginProfessionalComponent } from './components/Professional/login-prof
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
+    // CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     StepsModule,
     ToastModule,
+    BrowserAnimationsModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
+    
 
   ],
   providers: [SecurityService],
