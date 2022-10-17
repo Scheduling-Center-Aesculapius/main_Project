@@ -16,6 +16,7 @@ import { LoginAdminComponent } from './components/Admin/login-admin/login-admin.
 import { TeamComponent } from './components/Team/team/team.component';
 import { SecurityService } from './services/security.service';
 import { LoginProfessionalComponent } from './components/Professional/login-professional/login-professional.component';
+import { EditProfessionalComponent } from './components/Professional/edit-professional/edit-professional.component';
 
 const routes: Routes = [
   {path: '', component:MainPageComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'register-professional', component: RegisterProfessionalComponent},
   {path: 'professional-profile', component: ProfessionalProfileComponent, canActivate:[SecurityService]},
   {path: 'home-professional', component: HomepageProfessionalComponent},
+  {path: 'edit-professional', component: EditProfessionalComponent},
 
   // , canActivate:[SecurityService]
   {path: 'login-admin', component: LoginAdminComponent},
