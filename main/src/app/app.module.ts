@@ -19,6 +19,8 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
 import { FormGroup,Validators,FormBuilder } from '@angular/forms';
 
+import { ButtonModule } from 'primeng/button';
+
 
 
 import {TableModule} from 'primeng/table';
@@ -39,7 +41,7 @@ import { AppointmentTableComponent } from './components/Patient/appointment-tabl
 import { AddAppointmentModalComponent } from './components/Patient/add-appointment-modal/add-appointment-modal.component';
 import { PatientProfileComponent } from './components/Patient/patient-profile/patient-profile.component';
 import { AddAppointmentBtnComponent } from './components/Patient/add-appointment-btn/add-appointment-btn.component';
-import { RegisterProfessionalComponent } from './components/Professional/register-professional/register-professional.component';
+import { RegisterProfessionalComponent } from './components/Admin/CRUD PROFESSIONAL/register-professional/register-professional.component';
 import { RegisterAdmimComponent } from './components/Admin/register-admim/register-admim.component';
 import { FooterComponent } from './components/Shared/footer/footer.component';
 import { HomepageProfessionalComponent } from './components/Professional/homepage-professional/homepage-professional.component';
@@ -62,6 +64,8 @@ import { TechnologiesSectionComponent } from './components/Shared/technologies-s
 import { VideoComponent } from './components/Shared/video/video.component';
 import { LoginProfessionalComponent } from './components/Professional/login-professional/login-professional.component';
 import { EditProfessionalComponent } from './components/Professional/edit-professional/edit-professional.component';
+import { AdminEditProfessionalComponent } from './components/Admin/CRUD PROFESSIONAL/admin-edit-professional/admin-edit-professional.component';
+import { EditShiftComponent } from './components/Professional/edit-shift/edit-shift.component';
 
 
 @NgModule({
@@ -102,7 +106,9 @@ import { EditProfessionalComponent } from './components/Professional/edit-profes
     TechnologiesSectionComponent,
     VideoComponent,
     LoginProfessionalComponent,
-    EditProfessionalComponent, 
+    EditProfessionalComponent,
+    AdminEditProfessionalComponent,
+    EditShiftComponent, 
   ],
   imports: [
     BrowserModule,
@@ -126,6 +132,7 @@ import { EditProfessionalComponent } from './components/Professional/edit-profes
       provide: DateAdapter,
       useFactory: adapterFactory,
     }),
+    ButtonModule
     
 
   ],

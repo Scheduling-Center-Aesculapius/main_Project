@@ -9,7 +9,7 @@ import { PatientProfileComponent } from './components/Patient/patient-profile/pa
 import { RegisterPatientComponent } from './components/Patient/register-patient/register-patient.component';
 import { ProfessionalProfileComponent } from './components/Professional/professional-profile/professional-profile.component';
 import { ProfessionalSearchComponent } from './components/Professional/professional-search/professional-search.component';
-import { RegisterProfessionalComponent } from './components/Professional/register-professional/register-professional.component';
+import { RegisterProfessionalComponent } from './components/Admin/CRUD PROFESSIONAL/register-professional/register-professional.component';
 import { RouterNotFoundComponent } from './components/Shared/router-not-found/router-not-found.component';
 import { HomepageProfessionalComponent } from './components/Professional/homepage-professional/homepage-professional.component';
 import { LoginAdminComponent } from './components/Admin/login-admin/login-admin.component';

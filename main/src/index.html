@@ -20,7 +20,12 @@
 <link href='fullcalendar/main.css' rel='stylesheet' />
 <script src='fullcalendar/main.js'></script>
 <script>
+const myModal = document.getElementById('editModalProfessional')
+const myInput = document.getElementById('editShift')
 
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
  
 </script>
 </head>

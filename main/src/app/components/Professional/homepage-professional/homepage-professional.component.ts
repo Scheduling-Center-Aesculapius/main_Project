@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage-professional.component.css']
 })
 export class HomepageProfessionalComponent implements OnInit {
-  constructor() { }
-
   ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
-
+  
 }

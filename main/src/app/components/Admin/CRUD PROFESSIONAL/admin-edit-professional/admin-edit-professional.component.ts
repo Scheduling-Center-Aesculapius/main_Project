@@ -1,44 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ProfessionalsService } from 'src/app/services/professionals.service';
-import { PrimeNGConfig } from 'primeng/api';
-import {ConfirmDialogModule} from 'primeng/confirmdialog';
-import {ConfirmationService} from 'primeng/api';
-import {Message} from 'primeng/api';
 
 @Component({
-  selector: 'app-edit-professional',
-  templateUrl: './edit-professional.component.html',
-  styleUrls: ['./edit-professional.component.css'],
-  styles: [`
-  :host ::ng-deep .p-button {
-      margin: 0 .5rem 0 0;
-      min-width: 10rem;
-  }
-
-  p {
-      margin: 0;
-  }
-
-  .confirmation-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-
-  :host ::ng-deep .p-dialog .p-button {
-      min-width: 6rem;
-  }
-`]
+  selector: 'app-admin-edit-professional',
+  templateUrl: './admin-edit-professional.component.html',
+  styleUrls: ['./admin-edit-professional.component.css']
 })
-export class EditProfessionalComponent implements OnInit {
+export class AdminEditProfessionalComponent implements OnInit {
   form!: FormGroup;
   submitted = false;
-  
-  constructor(private formBuilder: FormBuilder, private ps: ProfessionalsService, private primengConfig: PrimeNGConfig) { }
+
+  constructor(private formBuilder: FormBuilder, private ps: ProfessionalsService) { }
 
   ngOnInit(): void {
-    this.primengConfig.ripple = true;
+
     this.form = this.formBuilder.group(
       {
         name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
@@ -84,37 +60,4 @@ export class EditProfessionalComponent implements OnInit {
     this.form.reset();
   }
 
-
-  displayModal!: boolean;
-
-  displayBasic!: boolean;
-
-  displayBasic2!: boolean;
-
-  displayMaximizable!: boolean;
-
-  displayPosition!: boolean;
-
-  position!: string;
-
-  showModalDialog() {
-      this.displayModal = true;
-  }
-
-  showBasicDialog() {
-      this.displayBasic = true;
-  }
-
-  showBasicDialog2() {
-      this.displayBasic2 = true;
-  }
-
-  showMaximizableDialog() {
-      this.displayMaximizable = true;
-  }
-
-  showPositionDialog(position: string) {
-      this.position = position;
-      this.displayPosition = true;
-  }
 }
