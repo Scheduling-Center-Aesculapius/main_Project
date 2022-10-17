@@ -13,8 +13,16 @@ export class AppConstants {
       return this.baseServer + "/medicals/login"
   }
 
+    public static get medicals(): any{
+      return this.baseServer + "/medicals"
+    }
+
     //
     public static get baseAdmin():string{
         return this.baseServer + "/admins/login"
+    }
+
+    public static get baseAppointments():string{
+      return this.baseServer + "/scheduling"
     }
 }

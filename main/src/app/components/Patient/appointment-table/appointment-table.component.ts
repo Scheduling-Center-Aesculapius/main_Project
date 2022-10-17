@@ -18,7 +18,7 @@ export class AppointmentTableComponent implements OnInit {
   }
 
   findAll(): void {
-    this.appointmentService.getAllAppointments().subscribe((resposta) => {
+    this.appointmentService.getAll().subscribe((resposta) => {
       this.appointments = resposta;
       console.log(this.appointments)
     })
