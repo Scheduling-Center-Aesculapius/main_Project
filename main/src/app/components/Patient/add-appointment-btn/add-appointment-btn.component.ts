@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { catchError, Observable, of } from 'rxjs';
 import { AppConstants } from 'src/app/app-constants';
 import { Appointments } from 'src/app/models/appointment.model';
 import { LoginPatient } from 'src/app/models/loginPatient';
 import { medicalModal } from 'src/app/models/medicalModal';
 import { RespondeLogin } from 'src/app/models/RespondeLogin';
+import { AppointmentService } from 'src/app/services/appointment.service';
 import Validation from 'src/app/utils/validation';
 
 
@@ -18,14 +20,23 @@ import Validation from 'src/app/utils/validation';
 export class AddAppointmentBtnComponent implements OnInit {
   form!: FormGroup;
   submitted = false;
-  public Appointments!: Appointments;
+  Appointments!: any;
+  patientId!: number;
+  medicalId!:number;
+  patientName!:any;
+  medicalName!:any;
+  dateOpen!:string;
+  dateClosed!:string;
+  description!: string;
+  priority!: string;
+  status!: string;
   public medicals!:any[];
 
 
-  constructor(private formBuilder: FormBuilder,private http: HttpClient) { }
+  constructor(private appointmentService: AppointmentService,private formBuilder: FormBuilder,private http: HttpClient,private router: Router) { }
 
   ngOnInit(): void {
-    this.Appointments = new Appointments
+    this.Appointments = {};
     console.log(this.getAll());
     this.form = this.formBuilder.group(
       {
@@ -40,6 +51,69 @@ export class AddAppointmentBtnComponent implements OnInit {
     );
     console.log(this.form);
   }
+
+  createAppointment() {
+    this.Appointments.doctor = { id: this.medicalId }
+    this.Appointments.patient = { id: this.patientId }
+    this.appointmentService
+      .create(this.Appointments)
+      .pipe(
+        catchError((error) => {
+          let appointmentList: Array<any> = new Array();
+          appointmentList.push(
+            {
+              id: 1,
+              date_appointment: "02/10/2022 19:13",
+              anamnesis: "Cefaleia leve",
+              prescription: "Paracetamol, se dor ou febre",
+              certificate: "n/h",
+              forwarding: "n/h",
+              medicalRelease: "Released",
+              patient: {
+                id: 1,
+                name: "Sheldon Cooper",
+                cpf: "316.094.990-77",
+                nameMother: "Carla Cooper",
+                nameFather: "Jose Cooper",
+                genre: "M",
+                birth: "1995-02-01",
+                streetName: "Rua Adolfo Konder",
+                numberHome: 1253,
+                city: "Navegantes",
+                state: "SC",
+                country: "Brasil"
+              },
+              doctor: {
+                id: 1,
+                name: "Carla Maria Moraes",
+                cpf: "528.220.220-46",
+                nameMother: "Julia Moraes",
+                nameFather: "Lucas Moraes",
+                genre: "Female",
+                birth: "1986-09-14",
+                streetName: "Rua Conselheir",
+                numberHome: 3476,
+                district: "Rocio Fechado",
+                city: "Londrina",
+                state: "Parana",
+                country: "Brasil",
+                registerNumber: "62445561-0",
+                registerState: "PR",
+                specialty: "Obstetra"
+              }
+            },
+          );
+          this.router.navigateByUrl("appointments")
+          return of(appointmentList);
+        })
+      )
+      .subscribe((response: any) => {
+        this.appointmentService.appointmentList.push(response);
+      });
+    this.clearInputs();
+    this.router.navigateByUrl("appointments")
+  }
+
 
   getAll(): Observable<medicalModal[]>{
     const url = AppConstants.medicals;
@@ -66,6 +140,14 @@ export class AddAppointmentBtnComponent implements OnInit {
       return console.log("Não!")
     }
 
+    clearInputs() {
+      this.patientName = "",
+  this.medicalName= "",
+  this.dateOpen= "";
+  this.description = "",
+  this.priority = "",
+  this.status = "";
+    }
 
   onCancel(): void {
     this.submitted = false;

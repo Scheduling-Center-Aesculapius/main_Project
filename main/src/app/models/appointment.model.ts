@@ -1,7 +1,7 @@
 export class Appointments {
     id!: number;
-    patient!: string;
-    medical!:string;
+    patient!: any;
+    medical!:any;
     dateOpen!:string;
     dateClosed!:string;
     description!: string;
