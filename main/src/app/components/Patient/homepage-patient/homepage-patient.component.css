@@ -9,8 +9,10 @@
 p-carousel{
 box-shadow: none !important;
 }
+
 .card-body {
   padding: .5rem 1rem !important;
+  height: 15rem !important;
 }
 
 .details {

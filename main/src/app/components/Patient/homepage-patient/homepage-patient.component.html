@@ -8,7 +8,7 @@
     </div>
     <div class="row">
         <div class="input-group">
-            <app-search-professional></app-search-professional>
+            <!-- <app-search-professional></app-search-professional> -->
         </div>
     </div>
 </div>
@@ -19,8 +19,8 @@
         <p-carousel [value]="professionals" styleClass="custom-carousel" [numVisible]="8" [numScroll]="1"
             [circular]="true" [responsiveOptions]="responsiveOptions" [style]={}>
             <ng-template let-professionals pTemplate="item">
-                <div class="item card">
-                    <img src="{{professionals.imageUrl}}" class="card-img-top professional" alt="...">
+                <div class="item card text-center">
+                    <!-- <img src="{{professionals.imageUrl}}" class="card-img-top professional" alt="..."> -->
                     <div class="card-body">
                         <h5 class="card-title">{{professionals.name}}</h5>
                         <p class="card-text">{{professionals.specialty}}</p>
@@ -31,10 +31,10 @@
                                             checkedcolor="#345B70" uncheckedcolor="gray" size="18px" [readonly]="true">
                                         </star-rating>
                                     </div> -->
-                                <div class="col text-end">
+                                <!-- <div class="col text-end">
                                     <span class=" btn favorite{{professionals.favorite?'':'not'}}"> <i
                                             class="fa fa-heart"></i></span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -61,11 +61,11 @@
                                 </span>
                             </div>
                             <div class="specialty-title">
-                                <span class="card-title" style="color: red">{{specialty.title}}</span>
+                                <span class="card-title">{{specialty.title}}</span>
                             </div>
                         </div>
                         <ol class="specialty-description">
-                            <p style="color: red">{{specialty.description}}</p>
+                            <p>{{specialty.description}}</p>
                         </ol>
                     </div>
                 </div>
