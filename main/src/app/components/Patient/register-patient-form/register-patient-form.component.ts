@@ -12,9 +12,7 @@ import { ConfirmedValidator } from '../../Shared/confirmed.validator';
 export class RegisterPatientFormComponent implements OnInit {
   form!: FormGroup;
   submitted = false;
-
-
-
+  
   constructor(private formBuilder: FormBuilder, private ps: PatientsService) { }
 
   ngOnInit(): void {
