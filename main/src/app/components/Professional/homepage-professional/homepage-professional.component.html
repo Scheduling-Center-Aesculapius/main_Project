@@ -3,7 +3,7 @@
     <div class="col-md">
       <div class="card card-widget widget-user shadow">
         <div class="widget-user-header bg-info">
-          <h2 class="widget-user-username" style="color: red;">Hello Doctor Strange</h2>
+          <h1 class="widget-user-username"><strong>Hello Doctor Strange</strong></h1>
         </div>
         <div class="widget-user-image">
           <img class="img-circle elevation-2" src="../assets/professional/professional_11.jpg" alt="User Avatar">
@@ -13,22 +13,21 @@
             <div class="col-sm-4 border-right">
               <div class="description-block">
                 <div class="btn-group" role="group">
-                 <app-edit-professional></app-edit-professional>
+                  <app-edit-professional></app-edit-professional>
                 </div>
               </div>
             </div>
             <div class="col-sm-4 border-right">
               <div class="description-block">
                 <div class="btn-group" role="group">
-                 <app-edit-shift></app-edit-shift>
+                  <app-edit-shift></app-edit-shift>
                 </div>
               </div>
-
             </div>
             <div class="col-sm-4 border-right">
               <div class="description-block">
                 <div class="btn-group" role="group">
-                  <button  [routerLink]="['/']"   type="button" class="btn btn-primary" aria-expanded="false">
+                  <button [routerLink]="['/']" type="button" class="btn btn-primary" aria-expanded="false">
                     Logout
                   </button>
                 </div>
@@ -41,4 +40,3 @@
   </div>
   <app-professional-calendar></app-professional-calendar>
 </div>
-
