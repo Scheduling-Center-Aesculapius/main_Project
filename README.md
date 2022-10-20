@@ -21,23 +21,19 @@ The initiative is to facilitate the scheduling of medical appointments with prof
 ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-black?style=flat&logo=visual-studio-code&logoColor=007ACC)&nbsp;
 
 ## 1st step : Prototyping 👨🏻‍🎨
-### Technologies
-![Figma](https://img.shields.io/badge/-Figma-black?style=flat&logo=figma)&nbsp;
+### Technologies : ![Figma](https://img.shields.io/badge/-Figma-black?style=flat&logo=figma)&nbsp;
 
 One of the most important parts of developing, its prototype the system, because it makes the process of structuring the application a lot easier when comes about designing the screens. Thinking about it, Orange Team took some hours and a lot of imagination to desing the system layout. We used Figma for this. Here is the preview :
 
 <br>
 <img src="./main/src/assets/readme/prototype.png">
 <br>
-
-
 <br>
 <br>
 
 
 ## 2nd step: Define the project management 🤖
-### Technologies
-![Trello](https://img.shields.io/badge/-Trello-black?style=flat&logo=trello)&nbsp;
+### Technologies : ![Trello](https://img.shields.io/badge/-Trello-black?style=flat&logo=trello)&nbsp;
 
 Another important point about development, it's to define the software to manage all the tasks on the backlog. For this, we used Trello.
 
@@ -49,9 +45,7 @@ Another important point about development, it's to define the software to manage
 
 
 ## 3rd step : Project Versioning 🧩
-### Technologies
-![Git](https://img.shields.io/badge/-Git-black?style=flat&logo=git)&nbsp;
-![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat&logo=github)&nbsp;
+### Technologies : ![Git](https://img.shields.io/badge/-Git-black?style=flat&logo=git)&nbsp; ![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat&logo=github)&nbsp;
 
 To manage the project versioning, we created an organization at Git. We organized the repositories between front-end and back-end.
 
@@ -110,12 +104,7 @@ The Admin can login with username and password, the main page shows some dashboa
 <br>
 
 ## 5th step : Back end 📊
-### Technologies
-![Java](https://img.shields.io/badge/-Java-black?style=flat&logo=Java)&nbsp; 
-![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat&logo=node.js)&nbsp;
-![Npm](https://img.shields.io/badge/-Npm-black?style=flat&logo=npm)&nbsp;
-![Postman](https://img.shields.io/badge/-Postman-black?style=flat&logo=postman)&nbsp;
-![Heroku](https://img.shields.io/badge/-Heroku-black?style=flat&logo=heroku)&nbsp;
+### Technologies :  ![Java](https://img.shields.io/badge/-Java-black?style=flat&logo=Java)&nbsp;  ![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat&logo=node.js)&nbsp; ![Npm](https://img.shields.io/badge/-Npm-black?style=flat&logo=npm)&nbsp; ![Postman](https://img.shields.io/badge/-Postman-black?style=flat&logo=postman)&nbsp; ![Heroku](https://img.shields.io/badge/-Heroku-black?style=flat&logo=heroku)&nbsp; ![Maven](https://img.shields.io/badge/-Maven-black?style=flat&logo=maven)&nbsp;
 
 To develop the back-end, we used Spring Boot (a Java framework) and Apache Maven to compile the application
 
@@ -127,7 +116,7 @@ To develop the back-end, we used Spring Boot (a Java framework) and Apache Maven
 
 
 ## Structure and logic
-> Starting from the config package: we have the configuration files
+The packages were structured following the MVC (Model, View and Controller) Standard. We created and deployed a REST (REpresentational State Transfer) 
 
 
 <br>
