@@ -1,11 +1,11 @@
-# 👩🏻‍⚕️ Aesculapius Scheduling Center 👩🏻‍⚕️
+# 👩🏻‍⚕️ Aesculapius Scheduling Center 👨🏻‍⚕️
 
-Team Orange is now developing the final version of the Entra21 project. You can check the prototype The initiative is to facilitate the scheduling of medical appointments with professionals from different areas of health. There are initially three profiles, the Patient, the Doctor - which can be any healthcare professional - and the Admin. To use the program, simply register, informing common data such as name, CPF (for the health professional, the CRM, CRE, CRO or CRP number for example), address for example. Patients will be able to search for which doctor will be available at the time they need it, they will be able to see their own appointments, change their dates and times, change professionals or even cancel an appointment. The doctor, on the other hand, will be able to share available times and days for patient care, view their appointments for the day and cancel a pre-booked appointment.
+The initiative is to facilitate the scheduling of medical appointments with professionals from different areas of health. There are initially three profiles, the Patient, the Doctor - which can be any healthcare professional - and the Admin. To use the program, simply register, informing common data such as name, CPF (for the health professional, the CRM, CRE, CRO or CRP number for example), address for example. Patients will be able to search for which doctor will be available at the time they need it, they will be able to see their own appointments, change their dates and times, change professionals or even cancel an appointment. The doctor, on the other hand, will be able to share available times and days for patient care, view their appointments for the day and cancel a pre-booked appointment.
 
 <br>
 
 <p align=center>
-<img src="./main/src/assets/logos/logo_1.png" width=300px  style="border-radius: 50%">
+<img src="./main/src/assets/readme/logo.png" width=300px>
 <p>
 
 
@@ -54,9 +54,37 @@ Basing our concepts on the best practices of the front end developing, we are us
 Each one has their own services and models, that comunicate with the back end , sending  the requests.
 
 <br>
+<p align=center>
 <img src="./main/src/assets/readme/vscode.png">
-<br>
+<p>
 
+<br>
+<details>
+<summary> 🙋🏻‍♀️ Patient profile 🙋🏻‍♂️ </summary>
+The patient can login using email and password. The main page shows some professionals and specialties. It also contains a floating action button to add new appointments.
+
+<br>
+<img src="./main/src/assets/readme/patient.gif">
+<br>
+</details>
+
+<br>
+<details>
+<summary> 👩🏻‍⚕️ Professional profile 👨🏻‍⚕️ </summary>
+The professional can login using crm and password. The professionals main page, shows the appointments by day, week or even month. Professional can edit personal information and shift information.
+<br>
+<img src="./main/src/assets/readme/professional.gif">
+<br>
+</details>
+
+<br>
+<details>
+<summary> 👩🏻‍🏫 Admin profile 👩🏻‍🏫 </summary>
+The Admin can login with username and password, the main page shows some dashboards with system data, admin can also manipulate professionals and admins.
+<br>
+<img src="./main/src/assets/readme/admin.gif">
+<br>
 </details>
 
 
+</details>
