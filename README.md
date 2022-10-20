@@ -4,8 +4,14 @@ Team Orange is now developing the final version of the Entra21 project. You can 
 
 <br>
 
+<p align=center>
+<img src="./main/src/assets/logos/logo_1.png" width=300px  style="border-radius: 50%">
+<p>
 
-<img src="./main/src/assets/logos/logo_1.png">
+
+<br>
+
+<br>
 
 <details>
 <summary>1st step : Prototyping 👨🏻‍🎨</summary>
