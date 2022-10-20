@@ -4,6 +4,9 @@ Team Orange is now developing the final version of the Entra21 project. You can 
 
 <br>
 
+
+<img src="./main/src/assets/logos/logo_1.png">
+
 <details>
 <summary>1st step : Prototyping 👨🏻‍🎨</summary>
 One of the most important parts of developing, its prototype the system, because it makes the process of structuring the application a lot easier when comes about designing the screens. Thinking about it, Orange Team took some hours and a lot of imagination to desing the system layout. We used Figma for this. Here is the preview :
