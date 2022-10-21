@@ -192,7 +192,7 @@ The REST layer -  where we implemented our business logic - and the service laye
 ## **Testing the requests**
 > Postman was the software we choose to test the application requests. It can be accessed on the browser or be downloaded [here.](https://www.postman.com/downloads/).
 
-We created colletions to test the application requests. You can download the requests from [here]()if you want.
+We created colletions to test the application requests. You can download the requests from [here](https://github.com/Scheduling-Center-Aesculapius/main_Project/tree/main/postman_requests)if you want.
 
 
 ## 🧡 Orange Team 🧡
