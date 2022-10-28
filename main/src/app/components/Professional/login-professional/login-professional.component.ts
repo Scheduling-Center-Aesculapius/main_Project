@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginMedical } from 'src/app/models/loginMedical';
 import { LoginPatient } from 'src/app/models/loginPatient';
 import { LoginServiceService } from 'src/app/services/login-service.service';
 import { SecurityService } from 'src/app/services/security.service';
@@ -13,13 +14,13 @@ import { SecurityService } from 'src/app/services/security.service';
 export class LoginProfessionalComponent implements OnInit {
 
   form: FormGroup = new FormGroup({
-    email: new FormControl(''),
+    crm: new FormControl(''),
     password: new FormControl('')
   });
   submitted = false;
-  public LoginPatient!: LoginPatient;
+  public LoginMedical!: LoginMedical;
 
-  user_ = { login: '', password: '' };
+  user_ = { crm: '', password: '' };
 
   constructor(private loginService: LoginServiceService,
     private formBuilder: FormBuilder,
@@ -27,21 +28,15 @@ export class LoginProfessionalComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.LoginPatient = new LoginPatient();
+    this.LoginMedical = new LoginMedical();
     this.form = this.formBuilder.group(
       {
-        email: ['', [Validators.required, Validators.email]],
-        password: [
-          '',
-          [
-            Validators.required,
-            Validators.minLength(6),
-            Validators.maxLength(40)
-          ]
-        ]
+        crm:['', [Validators.required]],
+        password: ['', [Validators.required]]
+
       },
     );
-    // console.log(this.form);
+    console.log(this.form);
   }
 
   get f(): { [key: string]: AbstractControl } {
@@ -63,14 +58,18 @@ export class LoginProfessionalComponent implements OnInit {
 
   login(): void {
     if (!this.form.invalid) {
-      this.loginService.loginPatient(this.LoginPatient).subscribe(
-        () => {
+      console.log("deu certo");
+
+      this.loginService.loginMedical(this.LoginMedical).subscribe(
+        (date) => {
           this.security.logged = true;
-          this.router.navigateByUrl("home-patient");
+          this.router.navigateByUrl("home-professional");
 
         },
         (error: any) => { console.log(error) }
       )
     }
+    console.log("Deu errado");
+
   }
 }

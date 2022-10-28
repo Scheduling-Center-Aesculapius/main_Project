@@ -5,6 +5,7 @@ import { Specialties } from 'src/app/models/specialties.model';
 import { SpecialtiesService } from 'src/app/services/specialties.service';
 import { StarRatingComponent } from 'ng-starrating';
 import { Observable } from 'rxjs';
+import { medicalModal } from 'src/app/models/medicalModal';
 
 @Component({
   selector: 'app-homepage-patient',
@@ -14,9 +15,9 @@ import { Observable } from 'rxjs';
 
 export class HomepagePatientComponent implements OnInit {
   responsiveOptions;
-  professionals: Professionals[] = [];
+  professionals: medicalModal[] = [];
   specialties: Specialties[] = [];
-  
+
   constructor(private ps: ProfessionalsService, private ss: SpecialtiesService) {
     this.responsiveOptions = [{
       breakpoint: '1024px',
@@ -32,7 +33,7 @@ export class HomepagePatientComponent implements OnInit {
   }
 
   findAll(): void {
-    this.ps.getAll().subscribe((resposta) => {
+    this.ps.getAll().subscribe((resposta: medicalModal[]) => {
       this.professionals = resposta;
       console.log(this.professionals)
     })

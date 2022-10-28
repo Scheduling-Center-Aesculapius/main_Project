@@ -4,6 +4,7 @@ import { AppConstants } from '../app-constants';
 import { LoginPatient } from '../models/loginPatient';
 import { Observable, observable } from 'rxjs';
 import { RespondeLogin } from '../models/RespondeLogin';
+import { LoginMedical } from '../models/loginMedical';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,13 @@ export class LoginServiceService {
   public loginPatient(LoginPatient: LoginPatient): Observable<RespondeLogin> {
     return this.http.post<RespondeLogin>(
       AppConstants.baseLoginPatient, LoginPatient
+      );
+
+  }
+
+  public loginMedical(LoginMedical: LoginMedical): Observable<RespondeLogin> {
+    return this.http.post<RespondeLogin>(
+      AppConstants.baseLoginMedical, LoginMedical
       );
 
   }

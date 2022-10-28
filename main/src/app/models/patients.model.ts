@@ -7,6 +7,7 @@ export class Patients {
     sex!: string;
     birthdate!: string;
     email!: string;
+    password!:string;
     motherName!: string;
     fatherName!: string;
     cepAddress!: string;

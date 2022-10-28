@@ -27,7 +27,7 @@ const routes: Routes = [
   {path: 'login-professional', component: LoginProfessionalComponent},
   {path: 'register-professional', component: RegisterProfessionalComponent},
   {path: 'professional-profile', component: ProfessionalProfileComponent, canActivate:[SecurityService]},
-  {path: 'home-professional', component: HomepageProfessionalComponent},
+  {path: 'home-professional', component: HomepageProfessionalComponent, canActivate:[SecurityService]},
   {path: 'edit-professional', component: EditProfessionalComponent},
 
   // , canActivate:[SecurityService]
@@ -36,7 +36,7 @@ const routes: Routes = [
   {path: 'search/:searchProfessional', component: ProfessionalSearchComponent, canActivate:[SecurityService]},
   // {path: '', redirectTo: '/home, pathMatch:'full'},
   // {path: '**', component:RouterNotFoundComponent},
-  
+
 ];
 
 @NgModule({

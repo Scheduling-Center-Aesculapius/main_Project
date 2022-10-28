@@ -11,7 +11,7 @@ import { SpecialtiesService } from 'src/app/services/specialties.service';
   styleUrls: ['./professional-search.component.css']
 })
 export class ProfessionalSearchComponent implements OnInit {
-  professionals: Professionals[] = [];
+  professionals!: any;
   responsiveOptions;
   specialties: Specialties[] = [];
 
@@ -24,20 +24,20 @@ export class ProfessionalSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.professionals = this.ps.getAll();
+    this.professionals = this.ps.getAll();
     // this.specialties = this.sps.getAllSpecialties();
 
     // this.route.params.subscribe(params => {
-      //  arrumar pra funcionar o filtro por nome e especialidade 
+      //  arrumar pra funcionar o filtro por nome e especialidade
       // if (params['searchProfessional'])
       //   this.professionals = this.ps.getAll().filter(professional =>
       //     professional.name.toLowerCase().includes(params['searchProfessional'].toLowerCase()));
-      // else 
+      // else
       // if (params['searchProfessional'])
       //   this.professionals = this.ps.getAll().filter(professional =>
       //     professional.specialty.toLowerCase().includes(params['searchProfessional'].toLowerCase()));
       // else
       //   this.professionals = this.ps.getAll();
     }
-    
+
   }

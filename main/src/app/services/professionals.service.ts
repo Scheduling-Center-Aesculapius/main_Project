@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { AppConstants } from '../app-constants';
+import { medicalModal } from '../models/medicalModal';
 
 
 @Injectable({
@@ -23,7 +24,7 @@ export class ProfessionalsService {
 
     getAll(): Observable<any> {
 
-      return this.http.get<any>(this.apiUrl);
+      return this.http.get<medicalModal[]>(this.apiUrl);
     }
 
     getById(doctor: any): Observable<any> {

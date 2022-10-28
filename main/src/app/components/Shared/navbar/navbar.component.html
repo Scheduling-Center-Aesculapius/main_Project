@@ -6,7 +6,7 @@
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse d-flex flex-column marginDoEmerson" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item" *ngFor="let link of getLinks()">
      <ng-container *ngIf="!link.action">
@@ -16,7 +16,7 @@
      </ng-container>
          <ng-container *ngIf="link.action">
             <a *ngIf="link.route" (click)="logout()" class="nav-link">
-              {{link.title}} 
+              {{link.title}}
             </a>
          </ng-container>
       </ul>
